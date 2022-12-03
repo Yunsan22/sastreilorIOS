@@ -1,0 +1,6 @@
+framework module Pods_sastreilorTests {
+  umbrella header "Pods-sastreilorTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
