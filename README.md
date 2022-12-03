@@ -106,6 +106,7 @@ Sastreilor will allow tailors all around the world to ditch their notebooks by a
 <img src="https://i.imgur.com/WKIBTm4.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src="https://imgur.com/1EQgIdr">
 <img src="https://github.com/CodePathPod8/Manga-Anime_Searcher/blob/main/Screen%20Shot%202022-10-19%20at%208.53.28%20PM.png">
 
 ### [BONUS] Interactive Prototype
