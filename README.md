@@ -105,11 +105,11 @@ Sastreilor will allow tailors all around the world to ditch their notebooks by a
 <img src="https://i.imgur.com/NokFRjr.jpg" width=600>
 <img src="https://i.imgur.com/WKIBTm4.jpg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
 
 <img src="https://i.imgur.com/HLRiXev.png">
 
-### [BONUS] Interactive Prototype
+### Interactive Prototype
 <img src="https://i.imgur.com/I2ScXQN.gif">
 
 ![](https://imgur.com/1EQgIdr)
@@ -124,7 +124,7 @@ Here's a walkthrough of implemented user stories:
 
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
 | Property | Type | Description |
 | --- | --- | --- |
