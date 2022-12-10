@@ -32,8 +32,13 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         setUpElements()
+        setup()
     }
+    
+   
+    
     
     func setUpElements(){
         
@@ -63,6 +68,11 @@ class SignUpVC: UIViewController {
         
         return nil
     }
+    
+    @IBAction func backToSignInBtn(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     
 
     @IBAction func onSignUp(_ sender: Any) {
@@ -132,6 +142,75 @@ class SignUpVC: UIViewController {
         present(alert,animated: true)
         
     }
+    private func setup(){
+        setupDismissKeyboardGesture()
+        setupKeyboardHiding()
+    }
+    
+    func setupDismissKeyboardGesture(){
+        //this code will dismiss the keyboard
+        let dismisskeyboardTap = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
+        view.addGestureRecognizer(dismisskeyboardTap)
+
+    }
+    @objc func viewTapped(_ recognizer: UITapGestureRecognizer){
+        if recognizer.state == UIGestureRecognizer.State.ended{
+            view.endEditing(true)
+        }
+    }
+    
+    func setupKeyboardHiding() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
 
+}
+extension SignUpVC {
+    @objc func keyboardWillShow(sender: NSNotification) {
+
+        guard let userInfo = sender.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let currentTextfield = UIResponder.currentFirst() as? UITextField else {
+            return
+        }
+//        print("foo - userInfo: \(userInfo)")
+//                print("foo - keyboardFrame: \(keyboardFrame)")
+//                print("foo - currentTextField: \(currentTextfield)")
+
+        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
+        let convertedTextFieldFrame = view.convert(currentTextfield.frame, from: currentTextfield.superview)
+        
+        let pwTextFieldBottomy = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+//        if pwTextFieldBottomy >= 380{
+//            pwTextFieldBottomy == keyboardTopY
+//
+//            if pwTextFieldBottomy >= keyboardTopY {
+//                let textBoxY = convertedTextFieldFrame.origin.y
+//                let newFrameY = (textBoxY - keyboardTopY / 2) * -1
+//                view.frame.origin.y = newFrameY
+//                print("this happened")
+//            }
+//        }
+        let confirmPWTextFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+        
+        print("print value for tefield: \(confirmPWTextFieldBottomY)")
+        print("print value for keyboardtopy: \(keyboardTopY)")
+        
+        if confirmPWTextFieldBottomY > 520.0 {
+            let textBoxY = convertedTextFieldFrame.origin.y
+            let newFrameY = (textBoxY - keyboardTopY / 2) * -1
+            view.frame.origin.y = newFrameY
+            print("this happened")
+        }
+//        else if confirmPWTextFieldBottomY > keyboardTopY {
+//            let textBoxY = convertedTextFieldFrame.origin.y
+//            let newframey = (textBoxY - keyboardTopY / 2) * -1
+//            view.frame.origin.y = newframey
+//        }
+
+    }
+    @objc func keyboardWillHide(sender: NSNotification){
+        view.frame.origin.y = 0
+    }
 }
