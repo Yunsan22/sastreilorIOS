@@ -74,21 +74,53 @@ class SignUpVC: UIViewController {
             //there is something wrong with fields, show error
             showError(error!)
         }else {
+            
+            //create clean version of the data
+            let firstName = nameTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTexfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             //create user
 
-             Auth.auth().createUser(withEmail: "email", password: "password") { result, err in
+             Auth.auth().createUser(withEmail: email, password: password) { result, err in
                 if err != nil {
                     
                     //there was an error
 //                    self.showError("Error Creating user")
-                    self.showError(err!.localizedDescription)
+                    let alert = UIAlertController(title: "Alert", message: err?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert,animated: true)
+                    
                 } else {
                     
+                    //user was created succesfully, now store the first name and last name
+                    let db = Firestore.firestore()
+                    db.collection("Users").addDocument(data: ["firstName":firstName,"lasName": lastName,"uid": result!.user.uid]) {
+                        (error) in
+                        if error != nil {
+                            //show error message
+                            let alert = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            self.present(alert,animated: true)
+//                            self.showError("erro saving user data")
+                        }
+                    }
+                    
+                    
+                    //go back to sign in vc
+                    let alert = UIAlertController(title: "Alert", message: "you have registered", preferredStyle: .alert)
+                    self.present(alert,animated: true)
+                    let okAction = UIAlertAction(title: "OK", style: .default) {
+                        (action: UIAlertAction!) in
+                        self.dismiss(animated: true)
+                    }
+                
+                    alert.addAction(okAction)
                 }
             }
 
 
-            //go back to sign in vc
         }
      
         

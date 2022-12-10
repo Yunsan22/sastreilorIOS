@@ -35,6 +35,7 @@
 		BD0652FA293CE9C30017D958 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0652F9293CE9C30017D958 /* SignUpVC.swift */; };
 		BD0652FC293CFD4B0017D958 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD0652FB293CFD4B0017D958 /* GoogleService-Info.plist */; };
 		BD0652FF29435B7A0017D958 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0652FE29435B7A0017D958 /* Utilities.swift */; };
+		BD0653012944012A0017D958 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0653002944012A0017D958 /* DashboardVC.swift */; };
 		D8C4209032177931EEB9221B /* Pods_sastreilor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F63BBABAAEB7DBC2C42F6ED /* Pods_sastreilor.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		BD0652F9293CE9C30017D958 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		BD0652FB293CFD4B0017D958 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD0652FE29435B7A0017D958 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BD0653002944012A0017D958 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		CD69ABE4A9643C6C238F52E3 /* Pods-sastreilor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sastreilor.release.xcconfig"; path = "Target Support Files/Pods-sastreilor/Pods-sastreilor.release.xcconfig"; sourceTree = "<group>"; };
 		DAE00E0D1776793182E89CAF /* Pods_sastreilorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sastreilorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB737886948D1E42B477EE /* Pods-sastreilorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sastreilorTests.debug.xcconfig"; path = "Target Support Files/Pods-sastreilorTests/Pods-sastreilorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,8 +152,8 @@
 		BD0652AA293B816D0017D958 /* sastreilor */ = {
 			isa = PBXGroup;
 			children = (
+				BD065302294401350017D958 /* ViewControllers */,
 				BD0652FD29435B560017D958 /* Helpers */,
-				BD0652F6293CE84D0017D958 /* SignInSignUp */,
 				BD0652AB293B816D0017D958 /* AppDelegate.swift */,
 				BD0652AD293B816D0017D958 /* SceneDelegate.swift */,
 				BD0652AF293B816D0017D958 /* ViewController.swift */,
@@ -196,6 +198,15 @@
 				BD0652FE29435B7A0017D958 /* Utilities.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BD065302294401350017D958 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD0653002944012A0017D958 /* DashboardVC.swift */,
+				BD0652F6293CE84D0017D958 /* SignInSignUp */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C518D1FA1E43B24E6D5F06DB /* Pods */ = {
@@ -481,6 +492,7 @@
 			files = (
 				BD0652FF29435B7A0017D958 /* Utilities.swift in Sources */,
 				BD0652B0293B816D0017D958 /* ViewController.swift in Sources */,
+				BD0653012944012A0017D958 /* DashboardVC.swift in Sources */,
 				BD0652AC293B816D0017D958 /* AppDelegate.swift in Sources */,
 				BD0652F8293CE8BF0017D958 /* SignInVC.swift in Sources */,
 				BD0652FA293CE9C30017D958 /* SignUpVC.swift in Sources */,
