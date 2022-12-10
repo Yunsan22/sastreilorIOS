@@ -1,7 +1,7 @@
 Original App Design Project - README 
 ===
 
-# Sastreilor
+# SastreilorIOS
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -118,9 +118,9 @@ Sastreilor will allow tailors all around the world to ditch their notebooks by a
 
 Here's a walkthrough of implemented user stories:
 
-| Oct. 28, 2022 | Nov. 4, 2022 | Nov 12, 2022 | Nov 19, 2022 
+| Dec 9, 2022 | TBA, 2022 | TBA, 2022 | TBA, 2022 
 | --- | --- | --- | --- |
-| ![](https://i.imgur.com/Gu0WNTr.gif) | ![](https://i.imgur.com/tNt2IpK.gif) | ![](https://i.imgur.com/8teSKZT.gif) | ![](https://i.imgur.com/KrLHUQt.gif) |
+| ![](https://i.imgur.com/XaAYsQQ.gif) | ![]() | ![]() | ![]() |
 
 
 ## Schema 
