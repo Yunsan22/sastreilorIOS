@@ -115,14 +115,14 @@ extension SignInVC {
             return
         }
         
-        print("foo - userInfo: \(userInfo)")
-                print("foo - keyboardFrame: \(keyboardFrame)")
-                print("foo - currentTextField: \(currentTextfield)")
+        
         let keyboardTopY = keyboardFrame.cgRectValue.origin.y
         let convertedTextFieldFrame = view.convert(currentTextfield.frame, from: currentTextfield.superview)
         let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
 
-        if textFieldBottomY > keyboardTopY {
+        print("print value for tefield: \(textFieldBottomY)")
+        print("print value for keyboardtopy: \(keyboardTopY)")
+        if textFieldBottomY > 530.0 {
             let textBoxY = convertedTextFieldFrame.origin.y
             let newframey = (textBoxY - keyboardTopY / 2) * -1
             view.frame.origin.y = newframey
