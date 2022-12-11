@@ -12,6 +12,8 @@ target 'sastreilor' do
   pod 'SkeletonView'
   pod 'Parse'
   pod 'MessageInputBar'
+  pod 'FirebaseAuth'
+  pod 'GoogleSignIn'
 
   target 'sastreilorTests' do
     inherit! :search_paths

@@ -374,7 +374,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="4Xs-Ak-yWM">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="7eJ-t7-BFj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" modalPresentationStyle="fullScreen" id="7eJ-t7-BFj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jib-gx-Sa1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vti-xH-1uC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -414,7 +414,20 @@
                             <constraint firstItem="WJg-xg-1A2" firstAttribute="trailing" secondItem="DtM-sj-6cD" secondAttribute="trailing" id="row-0b-5fr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oor-2V-BzQ"/>
+                    <navigationItem key="navigationItem" id="oor-2V-BzQ">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Logout" id="w3B-d8-Uyz">
+                                <connections>
+                                    <action selector="onLogoutBtn:" destination="BIo-EZ-LY4" id="FGC-fF-6lO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="profile_tab" id="ZGM-ur-NYd">
+                                <connections>
+                                    <segue destination="E3A-Zh-vGI" kind="show" id="ois-gu-wTA"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="WJg-xg-1A2" id="LZ5-Ym-VZ4"/>
                     </connections>
@@ -422,6 +435,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4V-JV-ePn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.3969465648854" y="908.45070422535218"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Ijc-qh-zwD">
+            <objects>
+                <viewController storyboardIdentifier="ProfileVC" title="Profile" id="E3A-Zh-vGI" customClass="ProfileVC" customModule="sastreilor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="66s-Ui-Hgb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="er0-PY-E7z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GWa-MV-cP1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptP-Ox-4cb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2847" y="1175"/>
         </scene>
         <!--CalendarVC-->
         <scene sceneID="m6y-gU-4JL">
@@ -559,6 +588,7 @@
         <image name="facebook" width="35" height="28"/>
         <image name="file-check" width="25" height="25"/>
         <image name="measurement" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="25"/>
         <image name="suit 1" width="499" height="499"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -37,6 +37,7 @@ class SignInVC: UIViewController {
         return nil
     }
     
+    
 
     @IBAction func onSignIn(_ sender: Any) {
         print("btn clicked")
@@ -47,32 +48,36 @@ class SignInVC: UIViewController {
             //there is something wrong with fields, show error
             showError(error!)
         } else {
-            
-            //create clean version of the data
-            let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            //Sign in the user
-            Auth.auth().signIn(withEmail: email, password: password) { //[weak self] authResult, error in
-                (authResult, error) in
-                //              guard let strongSelf = self else { return }
-                
-                if error != nil {
-                    //couldnt sign in
-                    let alert = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(alert,animated: true)
-//                    self.showError(error!.localizedDescription)
-                }
-                else {
-                    //go into gome
-                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                }
-              
-            }
+           handleSignIn()
         }
         
         
+    }
+    
+    @objc func handleSignIn(){
+        
+        //create clean version of the data
+        let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        //Sign in the user
+        Auth.auth().signIn(withEmail: email, password: password) { //[weak self] authResult, error in
+            (authResult, error) in
+            //              guard let strongSelf = self else { return }
+            
+            if error != nil {
+                //couldnt sign in
+                let alert = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert,animated: true)
+//                    self.showError(error!.localizedDescription)
+            }
+            else {
+                //go into gome
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+          
+        }
     }
     
     func showError(_ message:String){

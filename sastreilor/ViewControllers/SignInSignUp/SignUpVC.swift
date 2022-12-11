@@ -74,66 +74,63 @@ class SignUpVC: UIViewController {
     }
     
     
+    @objc func handleSignUp() {
+        guard let email = emailTextfield.text else {return}
+        guard let name = nameTextfield.text else {return}
+        guard let lastName = lastNameTextfield.text else {return}
+        guard let password = passwordTexfield.text else {return}
+        
+        createUser(withEmail: email, password: password, name: name, lastname: lastName)
+    }
 
     @IBAction func onSignUp(_ sender: Any) {
-        print("sign up btn clicked")
         //validate the fields
-        
         let error = validateFields()
         if error != nil {
             //there is something wrong with fields, show error
             showError(error!)
         }else {
-            
-            //create clean version of the data
-            let firstName = nameTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let lastName = lastNameTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let email = emailTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTexfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            //create user
-
-             Auth.auth().createUser(withEmail: email, password: password) { result, err in
-                if err != nil {
-                    
-                    //there was an error
+            handleSignUp()
+        }
+    }
+    
+    
+    func createUser(withEmail email: String, password: String, name: String, lastname: String) {
+        //create clean version of the data
+        let firstName = nameTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lastName = lastNameTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let email = emailTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTexfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().createUser(withEmail: email, password: password){ (result, error) in
+            if let error = error {
+                //there was an error
 //                    self.showError("Error Creating user")
-                    let alert = UIAlertController(title: "Alert", message: err?.localizedDescription, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Alert", message: "Failed to sign user up with error \(error.localizedDescription )", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert,animated: true)
+                return
+            }
+            guard let uid = result?.user.uid else {return}
+            let values = ["firstName":firstName,"lasName": lastName,"email":email,"uid": uid]
+            let db = Firestore.firestore()
+            
+            db.collection("Users").document(uid).setData(values) { (error) in
+                if error != nil {
+                    let alert = UIAlertController(title: "Alert", message: "failed to saved the values \(error?.localizedDescription)", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(alert,animated: true)
-                    
-                } else {
-                    
-                    //user was created succesfully, now store the first name and last name
-                    let db = Firestore.firestore()
-                    db.collection("Users").addDocument(data: ["firstName":firstName,"lasName": lastName,"uid": result!.user.uid]) {
-                        (error) in
-                        if error != nil {
-                            //show error message
-                            let alert = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .default))
-                            self.present(alert,animated: true)
-//                            self.showError("erro saving user data")
-                        }
-                    }
-                    
-                    
-                    //go back to sign in vc
-                    let alert = UIAlertController(title: "Alert", message: "you have registered", preferredStyle: .alert)
-                    self.present(alert,animated: true)
-                    let okAction = UIAlertAction(title: "OK", style: .default) {
-                        (action: UIAlertAction!) in
-                        self.dismiss(animated: true)
-                    }
-                
-                    alert.addAction(okAction)
                 }
             }
-
-
+            //go back to sign in vc
+            let alert = UIAlertController(title: "Alert", message: "you have registered", preferredStyle: .alert)
+            self.present(alert,animated: true)
+            let okAction = UIAlertAction(title: "OK", style: .default) {
+                (action: UIAlertAction!) in
+                self.dismiss(animated: true)
+            }
+            alert.addAction(okAction)
         }
-     
-        
     }
     
     func showError(_ message:String){
@@ -181,17 +178,7 @@ extension SignUpVC {
         let keyboardTopY = keyboardFrame.cgRectValue.origin.y
         let convertedTextFieldFrame = view.convert(currentTextfield.frame, from: currentTextfield.superview)
         
-        let pwTextFieldBottomy = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
-//        if pwTextFieldBottomy >= 380{
-//            pwTextFieldBottomy == keyboardTopY
-//
-//            if pwTextFieldBottomy >= keyboardTopY {
-//                let textBoxY = convertedTextFieldFrame.origin.y
-//                let newFrameY = (textBoxY - keyboardTopY / 2) * -1
-//                view.frame.origin.y = newFrameY
-//                print("this happened")
-//            }
-//        }
+      
         let confirmPWTextFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
         
         print("print value for tefield: \(confirmPWTextFieldBottomY)")
@@ -203,11 +190,7 @@ extension SignUpVC {
             view.frame.origin.y = newFrameY
             print("this happened")
         }
-//        else if confirmPWTextFieldBottomY > keyboardTopY {
-//            let textBoxY = convertedTextFieldFrame.origin.y
-//            let newframey = (textBoxY - keyboardTopY / 2) * -1
-//            view.frame.origin.y = newframey
-//        }
+
 
     }
     @objc func keyboardWillHide(sender: NSNotification){
