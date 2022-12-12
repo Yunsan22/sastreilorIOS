@@ -15,9 +15,32 @@ class DashboardVC: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
     
+    var values = [String]()
+    
+    fileprivate func loadDAta(){
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let db = Firestore.firestore()
+        let userRefe = db.collection("Users").document(uid)
+
+        userRefe.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                self.values = [dataDescription] as! [String]
+                print("this is values \(self.values)")
+                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
+            }
+        }
+
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableview.dataSource = self
+        loadDAta()
 
         // Do any additional setup after loading the view.
     }
@@ -57,4 +80,22 @@ class DashboardVC: UIViewController {
     }
     
 
+}
+
+extension DashboardVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let datavalue = values[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as? DashboardCell else { return UITableViewCell()
+            
+        }
+        
+//        cell.nameLabel.text = [datavalue["firstName"]] as?  String
+        return cell
+    }
+    
+    
 }

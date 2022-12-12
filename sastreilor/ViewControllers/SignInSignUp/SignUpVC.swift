@@ -65,6 +65,11 @@ class SignUpVC: UIViewController {
             //pw is not secure
             return "Please make sure your password is at least 8 charaters, contains special charaters and a number"
         }
+        let cleamEmail = emailTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isValidEmail(cleamEmail) == false {
+            //emial is not valid
+            return "Please enter a valid Email"
+        }
         
         return nil
     }
