@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
-      
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         return true
+    }
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!){
+//        print("user email: \(user.profile?.email ?? "No email")")
+//    }
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey:Any]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
     }
 
     // MARK: UISceneSession Lifecycle

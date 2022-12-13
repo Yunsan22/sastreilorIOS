@@ -88,7 +88,7 @@ extension DashboardVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let datavalue = values[indexPath.row]
+//        let datavalue = values[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as? DashboardCell else { return UITableViewCell()
             
         }
