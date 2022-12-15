@@ -41,6 +41,7 @@
 		BD0653082944B8A30017D958 /* calendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0653072944B8A30017D958 /* calendarVC.swift */; };
 		BD06530A294625720017D958 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD065309294625720017D958 /* ProfileVC.swift */; };
 		BD06530D29468BE30017D958 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06530C29468BE30017D958 /* DashboardCell.swift */; };
+		BDAB4DA9294B208700803B67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDAB4DAB294B208700803B67 /* Localizable.strings */; };
 		D8C4209032177931EEB9221B /* Pods_sastreilor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F63BBABAAEB7DBC2C42F6ED /* Pods_sastreilor.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,9 @@
 		BD0653072944B8A30017D958 /* calendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarVC.swift; sourceTree = "<group>"; };
 		BD065309294625720017D958 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BD06530C29468BE30017D958 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		BDAB4DA6294B1FE400803B67 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		BDAB4DAA294B208700803B67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BDAB4DAC294B209300803B67 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CD69ABE4A9643C6C238F52E3 /* Pods-sastreilor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sastreilor.release.xcconfig"; path = "Target Support Files/Pods-sastreilor/Pods-sastreilor.release.xcconfig"; sourceTree = "<group>"; };
 		DAE00E0D1776793182E89CAF /* Pods_sastreilorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sastreilorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB737886948D1E42B477EE /* Pods-sastreilorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sastreilorTests.debug.xcconfig"; path = "Target Support Files/Pods-sastreilorTests/Pods-sastreilorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				BD0652B6293B81700017D958 /* LaunchScreen.storyboard */,
 				BD0652FB293CFD4B0017D958 /* GoogleService-Info.plist */,
 				BD0652B9293B81700017D958 /* Info.plist */,
+				BDAB4DAB294B208700803B67 /* Localizable.strings */,
 			);
 			path = sastreilor;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = BD06529F293B816D0017D958;
 			packageReferences = (
@@ -382,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDAB4DA9294B208700803B67 /* Localizable.strings in Resources */,
 				BD0652B8293B81700017D958 /* LaunchScreen.storyboard in Resources */,
 				BD0652FC293CFD4B0017D958 /* GoogleService-Info.plist in Resources */,
 				BD0652B5293B81700017D958 /* Assets.xcassets in Resources */,
@@ -565,6 +572,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BD0652B2293B816D0017D958 /* Base */,
+				BDAB4DA6294B1FE400803B67 /* es-419 */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -577,6 +585,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		BDAB4DAB294B208700803B67 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDAB4DAA294B208700803B67 /* en */,
+				BDAB4DAC294B209300803B67 /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -584,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -644,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

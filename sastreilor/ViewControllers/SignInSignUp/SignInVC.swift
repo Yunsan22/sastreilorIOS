@@ -19,15 +19,23 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
-    @IBOutlet weak var signInButton: GIDSignInButton!
-  
+
+    @IBOutlet weak var GoogleBtn: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        signInWithGoogle()
+        
         setup()
+    }
+    
+  
+    @IBAction func OnGoogleSignInBtn(_ sender: Any) {
+        
+        signInWithGoogle()
     }
     
     func validateFields() -> String? {
@@ -35,7 +43,7 @@ class SignInVC: UIViewController {
         //check that all fields are filled in
         if emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  {
             
-            return "All fields are required to Sign In"
+            return "All fields are required to Sign In".localized()
             
         }
         
@@ -58,6 +66,8 @@ class SignInVC: UIViewController {
         
         
     }
+
+   
     @objc func signInWithGoogle(){
         
 //        GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -73,6 +83,9 @@ class SignInVC: UIViewController {
 
           if let error = error {
             // ...
+              let alert = UIAlertController(title: "error with gogle sigin".localized(), message: error.localizedDescription, preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "OK", style: .default))
+              self.present(alert,animated: true)
               print("this is an problem")
             return
           }
@@ -151,11 +164,13 @@ class SignInVC: UIViewController {
 //                  return
                 }
                 // User is signed in
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 print("whoooooo")
                 // ...
             }
         }
     }
+    
     
     @objc func handleSignIn(){
         
@@ -170,7 +185,7 @@ class SignInVC: UIViewController {
             
             if error != nil {
                 //couldnt sign in
-                let alert = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Alert", message: error?.localizedDescription.localized(), preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert,animated: true)
 //                    self.showError(error!.localizedDescription)
@@ -239,5 +254,17 @@ extension SignInVC {
     }
     @objc func signinkeyboardWillHide(sender: NSNotification){
         view.frame.origin.y = 0
+    }
+}
+
+extension String {
+    func localized() -> String {
+        return NSLocalizedString(
+            self,
+            tableName: "Localizable",
+            bundle: .main,
+            value: self,
+            comment: self
+        )
     }
 }

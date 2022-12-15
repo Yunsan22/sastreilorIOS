@@ -7,7 +7,25 @@
 		<key>sastreilor.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>22</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>BD0652A7293B816D0017D958</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD0652BD293B81700017D958</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD0652C7293B81700017D958</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

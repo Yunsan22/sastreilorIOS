@@ -1,0 +1,123 @@
+//i change the values here so it worked for me
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "0dZ-EU-fhV"; */
+"0dZ-EU-fhV.placeholder" = "Correo electronico"; //email
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "1v7-35-YhO"; */
+"1v7-35-YhO.placeholder" = "contraseña"; //password
+
+/* Class = "UITabBarItem"; title = "dashboard"; ObjectID = "2bx-AK-3zm"; */
+"2bx-AK-3zm.title" = "dashboard"; //
+
+/* Class = "UITabBarItem"; title = "To Do"; ObjectID = "40O-4L-E1e"; */
+"40O-4L-E1e.title" = "Para hacer"; //To Do
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "49z-jK-cXF"; */
+"49z-jK-cXF.placeholder" = "Correo electronico"; //email
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "4VN-tq-lxo"; */
+"4VN-tq-lxo.text" = "Apellido"; //last name
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "6N9-u5-BvK"; */
+"6N9-u5-BvK.configuration.title" = "Iniciar session"; //Sign in
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6N9-u5-BvK"; */
+"6N9-u5-BvK.normalTitle" = "Iniciar session"; //Button //signupvc siginbtn
+
+/* Class = "UIButton"; configuration.title = " Sign in"; ObjectID = "AJg-cc-3Tb"; */
+"AJg-cc-3Tb.configuration.title" = " Iniciar session"; //Sign in
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AJg-cc-3Tb"; */
+"AJg-cc-3Tb.normalTitle" = "Iniciar session"; //Button //fb btn
+
+/* Class = "UILabel"; text = "Already have an account"; ObjectID = "AZm-io-WOT"; */
+"AZm-io-WOT.text" = "Ya tienes una cuenta"; //already have an account
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "Bhz-U2-3rb"; */
+"Bhz-U2-3rb.text" = "Bienvenido"; //Welcome
+
+/* Class = "UILabel"; text = "Login to your account"; ObjectID = "DiT-Wu-tlB"; */
+"DiT-Wu-tlB.text" = "Inicia sesion con tu cuenta"; //login to your account
+
+/* Class = "UIViewController"; title = "Profile"; ObjectID = "E3A-Zh-vGI"; */
+"E3A-Zh-vGI.title" = "Perfil"; //profile
+
+/* Class = "UITextField"; placeholder = "Comfirm Password"; ObjectID = "Hf9-A0-C1a"; */
+"Hf9-A0-C1a.placeholder" = " Confirmar Contraseña"; // confirm password
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "IfZ-jh-ndq"; */
+"IfZ-jh-ndq.placeholder" = "Contraseña"; //password
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "Kbt-I0-Ae1"; */
+"Kbt-I0-Ae1.configuration.title" = "Registrate"; //Sign up
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Kbt-I0-Ae1"; */
+"Kbt-I0-Ae1.normalTitle" = "Registrate"; //Button //sign up btn signinvc
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "QaP-cm-XXJ"; */
+"QaP-cm-XXJ.configuration.title" = "Iniciar session"; //Sign in
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QaP-cm-XXJ"; */
+"QaP-cm-XXJ.normalTitle" = "Iniciar session"; //Button //main signin btn signinvc
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "Ub7-F3-uyQ"; */
+"Ub7-F3-uyQ.configuration.title" = "Registrate"; //Sign up
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ub7-F3-uyQ"; */
+"Ub7-F3-uyQ.normalTitle" = " Iniciar session"; //Button googlesigninbtn
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "We2-iT-NYp"; */
+"We2-iT-NYp.text" = "Contraseña"; //password
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "dZN-xw-NJu"; */
+"dZN-xw-NJu.text" = "Nombre"; //name
+
+/* Class = "UILabel"; text = "name"; ObjectID = "f75-RN-xFO"; */
+"f75-RN-xFO.text" = "Nombre"; //name
+
+/* Class = "UITabBarItem"; title = "Measurement"; ObjectID = "gYi-W7-W40"; */
+"gYi-W7-W40.title" = "Medidas"; //Measurement
+
+/* Class = "UILabel"; text = "Re-type Password"; ObjectID = "gs1-bw-vt6"; */
+"gs1-bw-vt6.text" = "Re-entrar Contraseña"; //re-type password
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "hLu-ue-l0q"; */
+"hLu-ue-l0q.text" = "Registrate"; //register
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "iC2-RW-wzJ"; */
+"iC2-RW-wzJ.text" = "Correo electronico"; //email
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "jJO-6e-PbW"; */
+"jJO-6e-PbW.text" = "Bienvenido"; //Welcome
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "n7q-LH-Z31"; */
+"n7q-LH-Z31.text" = "No tiene una cuenta?"; //dont have an account?
+
+/* Class = "UIButton"; configuration.title = " Sign in"; ObjectID = "qzV-M4-88A"; */
+"qzV-M4-88A.configuration.title" = " Iniciar session"; //Sign in
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qzV-M4-88A"; */
+"qzV-M4-88A.normalTitle" = " Iniciar session"; //Button googlesiginbtn
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "r0E-P3-uXe"; */
+"r0E-P3-uXe.text" = "Correo electronico"; //email
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "riP-kb-Oh9"; */
+"riP-kb-Oh9.placeholder" = "Nombre"; //name
+
+/* Class = "UILabel"; text = "Forgot Password?"; ObjectID = "uJT-yt-9eK"; */
+"uJT-yt-9eK.text" = "olvido la Contraseña"; //forgot password
+
+/* Class = "UILabel"; text = "Create a new account"; ObjectID = "w0m-GW-dqn"; */
+"w0m-GW-dqn.text" = "Crea una cuanta nueva"; //create a new account
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "w3B-d8-Uyz"; */
+"w3B-d8-Uyz.title" = "Cerrar session"; //logout
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "yDC-Ia-EWD"; */
+"yDC-Ia-EWD.text" = "Contraseña"; //password
+
+/* Class = "UITabBarItem"; title = "Calendar"; ObjectID = "yWD-jy-Me0"; */
+"yWD-jy-Me0.title" = "Calendario"; //calendar
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "zZi-wn-oLx"; */
+"zZi-wn-oLx.placeholder" = "Apellido"; //last name
