@@ -87,6 +87,12 @@ extension DashboardVC: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     
+//    number os sections
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let datavalue = values[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell") as? DashboardCell else { return UITableViewCell()
