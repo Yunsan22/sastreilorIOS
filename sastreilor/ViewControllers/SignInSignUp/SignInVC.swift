@@ -11,6 +11,8 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class SignInVC: UIViewController {
 
@@ -28,7 +30,8 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+       
+//        FBbtn.permissions = ["email","public_profile"]
         setup()
     }
     
@@ -66,6 +69,62 @@ class SignInVC: UIViewController {
         
         
     }
+    
+//    @IBAction func onSignInWithFB(_ sender: Any) {
+//        SiginWithFaceBook()
+//    }
+//    @objc func SiginWithFaceBook(){
+//
+//        if let token = AccessToken.current,
+//                !token.isExpired {
+//                // User is logged in, do work such as go to next view controller.
+//        }else {
+//            FBbtn.permissions = ["email","public_profile"]
+//        }
+//
+//        let loginManager = LoginManager()
+//                loginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
+//                    if let error = error {
+//                        print("Failed to login: \(error.localizedDescription)")
+//                        return
+//                    }
+//
+//                    guard let accessToken = AccessToken.current else {
+//                        print("Failed to get access token")
+//                        return
+//                    }
+//
+//                    let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+//
+//                    // Perform login by calling Firebase APIs
+//                    Auth.auth().signIn(with: credential, completion: { (user, error) in
+//                        if let error = error {
+//                            print("Login error: \(error.localizedDescription)")
+//                            let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+//                            let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//                            alertController.addAction(okayAction)
+//                            self.present(alertController, animated: true, completion: nil)
+//                            return
+//                        }else {
+//
+//                            self.performSegue(withIdentifier: "loginSegue", sender: nil)
+//                            print("whoooooo")
+//                            //no needed
+////                            self.currentUserName()
+//                        }
+//
+//                    })
+//
+//                }
+//    }
+    
+//    func currentUserName()  {
+//            if let currentUser = Auth.auth().currentUser {
+//                self.btn_sign_out.isHidden = false
+//                lb_login_Status.text = "YOU ARE LOGIN AS - " +  (currentUser.displayName ?? "DISPLAY NAME NOT FOUND")
+//            }
+//        }
+    
 
    
     @objc func signInWithGoogle(){
@@ -83,9 +142,8 @@ class SignInVC: UIViewController {
 
           if let error = error {
             // ...
-              let alert = UIAlertController(title: "error with gogle sigin".localized(), message: error.localizedDescription, preferredStyle: .alert)
-              alert.addAction(UIAlertAction(title: "OK", style: .default))
-              self.present(alert,animated: true)
+              self.popSimpleAlert("Error with Google sigin", messeage: error.localizedDescription)
+              print(error.localizedDescription)
               print("this is an problem")
             return
           }
@@ -103,6 +161,7 @@ class SignInVC: UIViewController {
           // ...
             Auth.auth().signIn(with: credential) { authResult, error in
                 if error != nil {
+                    self.popSimpleAlert("Alert", messeage: error?.localizedDescription ?? "There was an error")
                     print("this is no good")
 //                  let authError = error as NSError
 //                  if isMFAEnabled,
@@ -178,29 +237,32 @@ class SignInVC: UIViewController {
         let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        //Sign in the user
+        //Sign in the user that has veried email
         Auth.auth().signIn(withEmail: email, password: password) { //[weak self] authResult, error in
             (authResult, error) in
             //              guard let strongSelf = self else { return }
-            
             if error != nil {
                 //couldnt sign in
-                let alert = UIAlertController(title: "Alert", message: error?.localizedDescription.localized(), preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert,animated: true)
+                self.popSimpleAlert("Alert", messeage: error?.localizedDescription ?? "There was an error")
 //                    self.showError(error!.localizedDescription)
             }
             else {
                 //go into gome
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                let user = authResult!.user
+                if user.isEmailVerified {
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                } else {
+                    //email is not verified
+                    self.popSimpleAlert("Alert", messeage: "Email is not verified")
+                }
             }
-          
         }
+        
     }
     
     func showError(_ message:String){
-        let alert = UIAlertController(title: "Alert", message: validateFields(), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: "comments"), message: NSLocalizedString(validateFields() ?? "nothing found", comment: "comments") , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "comments"), style: .default))
         present(alert,animated: true)
         
     }
@@ -225,6 +287,13 @@ class SignInVC: UIViewController {
     func setupKeyboardHiding() {
         NotificationCenter.default.addObserver(self, selector: #selector(signinkeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(signinkeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func popSimpleAlert(_ title: String, messeage: String){
+        
+        let alert = UIAlertController(title: NSLocalizedString(title, comment: "comments"), message: NSLocalizedString(messeage,comment: "nothiing"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "comment"), style: .default))
+        present(alert,animated: true)
     }
     
 
@@ -267,4 +336,18 @@ extension String {
             comment: self
         )
     }
+}
+extension SignInVC: LoginButtonDelegate {
+    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
+        let token = result?.token?.tokenString
+        
+//        let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields": "email","name"], tokenString: token, version: nil, httpMethod: .get)
+//
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        return
+    }
+    
+    
 }

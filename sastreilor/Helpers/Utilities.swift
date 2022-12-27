@@ -7,6 +7,9 @@
 
 import Foundation
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 class Utilities {
     static func styleTexField(_ textfield:UITextField) {
@@ -33,7 +36,8 @@ class Utilities {
     }
     
     static func isPasswordValid(_ password : String) -> Bool {
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[A-Z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+            
         let result = passwordTest.evaluate(with: password)
         return result
     }
@@ -44,6 +48,24 @@ class Utilities {
         let result = emailTest.evaluate(with: email)
         return result
     }
+    
+//    static func loadDAta(){
+//        guard let uid = Auth.auth().currentUser?.uid else {return}
+//        let db = Firestore.firestore()
+//        
+//        let userRefe = db.collection("Users").document(uid)
+//
+//        userRefe.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                self.values = [dataDescription] as! [String]
+//                print("this is values \(self.values)")
+//                print("Document data: \(dataDescription)")
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+//    }
     
 }
 extension UIResponder {

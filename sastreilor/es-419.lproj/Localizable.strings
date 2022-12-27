@@ -1,2 +1,21 @@
  "Email" = "Correo electronico";
 "0dZ-EU-fhV.placeholder" = "Correo electronico";
+"Alert" = "Alerta" ;
+"Are you sure you want to log out?" = "estas seguro que quieres cerrar session?";
+"Confirm" = "Confirmar";
+"Welcome" = "Bienvenido";
+"Ok" = "Ok" ;
+"All fields are required to Sign up" = "Es necesario llenar todos los campos para registrarte";
+
+"Passwords do not Match" = "Las contraseñas no son iguales";
+
+"Please make sure your password is at least 8 charaters, contains uppercase letters, special charaters and a number" = "Por favor asegurese que su contraseña tiene almenos 8 caracteres, contenga mayusculas, menisculas,caracteres speciales y almenos un numero";
+"Please enter a valid Email" = "Por favor entre un correo electronico valido";
+"All fields are required to Sign In" = "Todos los campos son requeridos para iniciar session";
+"Error with Google sigin" = "Error para iniciar session con Google";
+"The user canceled the sign-in flow." = "El usuario cancelo el flujo de inicio de session";
+"There was an error" = "Hubo un error";
+"Email is not verified" = "El correo electronico no esta vefificado";
+
+
+

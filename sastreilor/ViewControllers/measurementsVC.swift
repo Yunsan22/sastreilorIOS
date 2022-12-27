@@ -18,6 +18,8 @@ class measurementsVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        
     }
     
 
@@ -26,12 +28,13 @@ class measurementsVC: UIViewController {
 }
 extension measurementsVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return measurements.count
+        //        return measurements.count
+    return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MeasurementCell") as? MeasurementCell else {return UITableViewCell()}
-        let measuremts = measurements[indexPath.row]
+//        let measuremts = measurements[indexPath.row]
         
         return cell
     }

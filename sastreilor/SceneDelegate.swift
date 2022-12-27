@@ -9,6 +9,8 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,11 +23,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        if Auth.auth().currentUser != nil {
+//        if Auth.auth().currentUser != nil {
+        if Auth.auth().currentUser?.isEmailVerified == true {
             let main = UIStoryboard(name: "Main",bundle: nil)
             let tabBarNavigationController = main.instantiateViewController(withIdentifier: "TabBar")
             window?.rootViewController = tabBarNavigationController
         }
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+                return
+            }
+
+            ApplicationDelegate.shared.application(
+                UIApplication.shared,
+                open: url,
+                sourceApplication: nil,
+                annotation: [UIApplication.OpenURLOptionsKey.annotation]
+            )
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

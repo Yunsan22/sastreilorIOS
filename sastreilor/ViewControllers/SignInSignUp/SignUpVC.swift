@@ -63,7 +63,7 @@ class SignUpVC: UIViewController {
         }
         if Utilities.isPasswordValid(cleanPW) == false {
             //pw is not secure
-            return "Please make sure your password is at least 8 charaters, contains special charaters and a number"
+            return "Please make sure your password is at least 8 charaters, contains uppercase letters, special charaters and a number"
         }
         let cleamEmail = emailTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if Utilities.isValidEmail(cleamEmail) == false {
@@ -111,36 +111,43 @@ class SignUpVC: UIViewController {
             if let error = error {
                 //there was an error
 //                    self.showError("Error Creating user")
-                let alert = UIAlertController(title: "Alert", message: "Failed to sign user up with error \(error.localizedDescription )", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert,animated: true)
+                
+                self.popSimpleAlert("Alert", messeage: "Failed to sign user up with error \(error.localizedDescription )")
+                
                 return
             }
-            guard let uid = result?.user.uid else {return}
-            let values = ["firstName":firstName,"lasName": lastName,"email":email,"uid": uid]
-            let db = Firestore.firestore()
-            
-            db.collection("Users").document(uid).setData(values) { (error) in
-                if error != nil {
-                    let alert = UIAlertController(title: "Alert", message: "failed to saved the values \(error?.localizedDescription)", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(alert,animated: true)
+            Auth.auth().currentUser?.sendEmailVerification{ (error) in
+                if let error = error {
+                    //there was an error
+                    self.popSimpleAlert("Alert", messeage: "Failed to send email verification with error \(error.localizedDescription )")
+                    return
                 }
+                guard let uid = result?.user.uid else {return}
+                let values = ["firstName":firstName,"lasName": lastName,"email":email,"uid": uid]
+                let db = Firestore.firestore()
+                
+                db.collection("Users").document(uid).setData(values) { (error) in
+                    if error != nil {
+                        
+                        self.popSimpleAlert("Alert", messeage: "failed to saved the values \(String(describing: error?.localizedDescription))")
+                    }
+                }
+                //go back to sign in vc
+                let alert = UIAlertController(title: "Alert", message: "you have registered, please verify your email", preferredStyle: .alert)
+                self.present(alert,animated: true)
+                let okAction = UIAlertAction(title: "OK", style: .default) {
+                    (action: UIAlertAction!) in
+                    self.dismiss(animated: true)
+                }
+                alert.addAction(okAction)
             }
-            //go back to sign in vc
-            let alert = UIAlertController(title: "Alert", message: "you have registered", preferredStyle: .alert)
-            self.present(alert,animated: true)
-            let okAction = UIAlertAction(title: "OK", style: .default) {
-                (action: UIAlertAction!) in
-                self.dismiss(animated: true)
-            }
-            alert.addAction(okAction)
+            
         }
     }
     
     func showError(_ message:String){
-        let alert = UIAlertController(title: "Alert", message: validateFields(), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: "comments"), message: NSLocalizedString(validateFields() ?? "nothing found", comment: "comments") , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "comments"), style: .default))
         present(alert,animated: true)
         
     }
@@ -164,6 +171,13 @@ class SignUpVC: UIViewController {
     func setupKeyboardHiding() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func popSimpleAlert(_ title: String, messeage: String){
+        
+        let alert = UIAlertController(title: NSLocalizedString(title, comment: "comments"), message: messeage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "comment"), style: .default))
+        present(alert,animated: true)
     }
     
 

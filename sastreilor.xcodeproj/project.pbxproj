@@ -221,8 +221,8 @@
 		BD065302294401350017D958 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD0653002944012A0017D958 /* DashboardVC.swift */,
 				BD0652F6293CE84D0017D958 /* SignInSignUp */,
+				BD0653002944012A0017D958 /* DashboardVC.swift */,
 				BD0653032944B2EE0017D958 /* measurementsVC.swift */,
 				BD0653052944B60C0017D958 /* toDoVC.swift */,
 				BD0653072944B8A30017D958 /* calendarVC.swift */,

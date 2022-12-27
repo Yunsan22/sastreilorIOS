@@ -20,6 +20,8 @@ class DashboardVC: UIViewController {
     fileprivate func loadDAta(){
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let db = Firestore.firestore()
+        let refTouserTable = db.collection("Users")
+        
         let userRefe = db.collection("Users").document(uid)
 
         userRefe.getDocument { (document, error) in
@@ -32,8 +34,6 @@ class DashboardVC: UIViewController {
                 print("Document does not exist")
             }
         }
-
-        
     }
     
     override func viewDidLoad() {
@@ -48,11 +48,11 @@ class DashboardVC: UIViewController {
     @objc func handleLogout(){
         let FirebaseAuth = Auth.auth()
         //creating alert to confirm log out
-        let alert = UIAlertController(title: "Alert", message: "Are you sure you want to log out?", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: "Alertas"), message: NSLocalizedString("Are you sure you want to log out?", comment: "no comments now") , preferredStyle: .alert)
         
         present(alert,animated: true)
         //creating logout confirmation
-        let confimAction = UIAlertAction(title: "Confirm", style: .default) {
+        let confimAction = UIAlertAction(title:NSLocalizedString("Confirm", comment: "comentarios"), style: .default) {
             (action: UIAlertAction!) in
             do {
                 try FirebaseAuth.signOut()

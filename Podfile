@@ -14,6 +14,10 @@ target 'sastreilor' do
   pod 'MessageInputBar'
   pod 'FirebaseAuth'
   pod 'GoogleSignIn'
+  # for FAcebook
+	
+  pod 'FBSDKLoginKit'
+    
 
   target 'sastreilorTests' do
     inherit! :search_paths

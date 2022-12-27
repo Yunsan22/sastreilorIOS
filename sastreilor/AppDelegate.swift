@@ -11,6 +11,8 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
         FirebaseApp.configure()
         
         return true
@@ -27,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        print("user email: \(user.profile?.email ?? "No email")")
 //    }
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey:Any]) -> Bool {
+//        ApplicationDelegate.shared.application(
+//                    application,
+//                    open: url,
+//                    sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+//                    annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+//                )
         return GIDSignIn.sharedInstance.handle(url)
     }
 
