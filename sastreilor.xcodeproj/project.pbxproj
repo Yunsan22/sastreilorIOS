@@ -42,7 +42,13 @@
 		BD06530A294625720017D958 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD065309294625720017D958 /* ProfileVC.swift */; };
 		BD06530D29468BE30017D958 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06530C29468BE30017D958 /* DashboardCell.swift */; };
 		BD121820294E8937005652A3 /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12181F294E8937005652A3 /* MeasurementCell.swift */; };
+		BDA437B3297A05EA009F0614 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B2297A05EA009F0614 /* Colors.swift */; };
+		BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */; };
+		BDA437B7297A30F5009F0614 /* CollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */; };
 		BDAB4DA9294B208700803B67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDAB4DAB294B208700803B67 /* Localizable.strings */; };
+		BDDBC5FF295DEFC100D28203 /* TakeMeasurementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBC5FE295DEFC100D28203 /* TakeMeasurementVC.swift */; };
+		BDDBC601295F34E600D28203 /* DasboardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBC600295F34E600D28203 /* DasboardCollectionCell.swift */; };
+		BDDBC603295F55E900D28203 /* DashboardButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBC602295F55E900D28203 /* DashboardButtonCell.swift */; };
 		D8C4209032177931EEB9221B /* Pods_sastreilor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F63BBABAAEB7DBC2C42F6ED /* Pods_sastreilor.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,9 +99,15 @@
 		BD065309294625720017D958 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BD06530C29468BE30017D958 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		BD12181F294E8937005652A3 /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
+		BDA437B2297A05EA009F0614 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellModel.swift; sourceTree = "<group>"; };
+		BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellModel.swift; sourceTree = "<group>"; };
 		BDAB4DA6294B1FE400803B67 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
 		BDAB4DAA294B208700803B67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDAB4DAC294B209300803B67 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BDDBC5FE295DEFC100D28203 /* TakeMeasurementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeMeasurementVC.swift; sourceTree = "<group>"; };
+		BDDBC600295F34E600D28203 /* DasboardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasboardCollectionCell.swift; sourceTree = "<group>"; };
+		BDDBC602295F55E900D28203 /* DashboardButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardButtonCell.swift; sourceTree = "<group>"; };
 		CD69ABE4A9643C6C238F52E3 /* Pods-sastreilor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sastreilor.release.xcconfig"; path = "Target Support Files/Pods-sastreilor/Pods-sastreilor.release.xcconfig"; sourceTree = "<group>"; };
 		DAE00E0D1776793182E89CAF /* Pods_sastreilorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sastreilorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB737886948D1E42B477EE /* Pods-sastreilorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sastreilorTests.debug.xcconfig"; path = "Target Support Files/Pods-sastreilorTests/Pods-sastreilorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 				BD0652FB293CFD4B0017D958 /* GoogleService-Info.plist */,
 				BD0652B9293B81700017D958 /* Info.plist */,
 				BDAB4DAB294B208700803B67 /* Localizable.strings */,
+				BDA437B2297A05EA009F0614 /* Colors.swift */,
 			);
 			path = sastreilor;
 			sourceTree = "<group>";
@@ -227,6 +240,7 @@
 				BD0653052944B60C0017D958 /* toDoVC.swift */,
 				BD0653072944B8A30017D958 /* calendarVC.swift */,
 				BD065309294625720017D958 /* ProfileVC.swift */,
+				BDDBC5FE295DEFC100D28203 /* TakeMeasurementVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +250,10 @@
 			children = (
 				BD06530C29468BE30017D958 /* DashboardCell.swift */,
 				BD12181F294E8937005652A3 /* MeasurementCell.swift */,
+				BDDBC600295F34E600D28203 /* DasboardCollectionCell.swift */,
+				BDDBC602295F55E900D28203 /* DashboardButtonCell.swift */,
+				BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */,
+				BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -526,13 +544,19 @@
 				BD0653082944B8A30017D958 /* calendarVC.swift in Sources */,
 				BD0653062944B60C0017D958 /* toDoVC.swift in Sources */,
 				BD0652FF29435B7A0017D958 /* Utilities.swift in Sources */,
+				BDA437B3297A05EA009F0614 /* Colors.swift in Sources */,
 				BD0653042944B2EE0017D958 /* measurementsVC.swift in Sources */,
+				BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */,
 				BD121820294E8937005652A3 /* MeasurementCell.swift in Sources */,
 				BD0652B0293B816D0017D958 /* ViewController.swift in Sources */,
 				BD0653012944012A0017D958 /* DashboardVC.swift in Sources */,
 				BD0652AC293B816D0017D958 /* AppDelegate.swift in Sources */,
+				BDDBC603295F55E900D28203 /* DashboardButtonCell.swift in Sources */,
 				BD0652F8293CE8BF0017D958 /* SignInVC.swift in Sources */,
+				BDDBC601295F34E600D28203 /* DasboardCollectionCell.swift in Sources */,
+				BDA437B7297A30F5009F0614 /* CollectionViewCellModel.swift in Sources */,
 				BD0652FA293CE9C30017D958 /* SignUpVC.swift in Sources */,
+				BDDBC5FF295DEFC100D28203 /* TakeMeasurementVC.swift in Sources */,
 				BD06530A294625720017D958 /* ProfileVC.swift in Sources */,
 				BD06530D29468BE30017D958 /* DashboardCell.swift in Sources */,
 				BD0652AE293B816D0017D958 /* SceneDelegate.swift in Sources */,
