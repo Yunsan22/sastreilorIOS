@@ -16,6 +16,27 @@
 "The user canceled the sign-in flow." = "El usuario cancelo el flujo de inicio de session";
 "There was an error" = "Hubo un error";
 "Email is not verified" = "El correo electronico no esta vefificado";
+"Waist" = "Cintura";
+"First Name" = "Primer Nombre";
+"Last Name" = "Apellido";
+"Phone" = "Numero de Celular";
+"Comments" = "Notas";
+"Mailing Address" = "Direccion";
+"Street Address" = "Calle";
+"City" = "Ciudad";
+"State/Providence" = "Stado/Provincia";
+"Country" = "Pais";
+"Postal Code" = "Codigo Postal";
+"Guayabera/Shirt/jacket" = "Chacabana/Camisa/Chaqueta";
+"Back" = "Espalda";
+"Fist Width" = "Ancho de Puño";
+"Sleeve Length" = "Largo de Manga";
+"Elbow Width" = "Ancho de codo";
+"Chest Width" = "Ancho de pecho";
+"Belly Width" = "Ancho de barriga";
+"Neck Width" = "Ancho de cuello";
+"Jacket's Length" = "Largo de chaqueta";
+
 
 
 
