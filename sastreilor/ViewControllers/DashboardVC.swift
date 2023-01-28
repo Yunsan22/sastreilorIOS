@@ -6,89 +6,11 @@
 //
 
 import UIKit
+import SwiftUI
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
-class MycustomButton: UIButton {
-    
-    private let myTitleLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 1
-        label.textAlignment = .center
-        return label
-    }()
-    
-    private let myIconView: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFit
-        image.tintColor = .white
-        return image
-    }()
-    
-    private var viewModel: myCustomButtnViewmodel?
-    
-    override init(frame: CGRect) {
-        self.viewModel = nil
-        super.init(frame: frame)
-    }
-    
-    init(with viewModel: myCustomButtnViewmodel){
-        self.viewModel = viewModel
-        super.init(frame: .zero)
-              
-        
-        addSubviews()
-        configure(with: viewModel)
-    }
-    private func addSubviews(){
-        guard !myTitleLabel.isDescendant(of: self) else {
-            return
-        }
-        addSubview(myTitleLabel)
-        addSubview(myIconView)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    public func configure(with viewModel: myCustomButtnViewmodel){
-        
-        layer.masksToBounds = true
-        layer.cornerRadius = 8
-        layer.borderWidth = 1.5
-        
-        addSubviews()
-        
-        myTitleLabel.text = viewModel.title
-        myIconView.image = UIImage(systemName: viewModel.imagename)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        myIconView.frame = CGRect(
-            x: 5,
-            y: 5,
-            width: 50,
-            height: frame.height
-        ).integral
-        
-        myTitleLabel.frame = CGRect(
-            x: 60,
-            y: 5,
-            width: frame.width - 65 ,
-            height: (frame.height-10)/2
-        ).integral
-    }
-    
-}
-
-struct myCustomButtnViewmodel {
-    let title: String
-    let imagename: String
-}
 
 
 class DashboardVC: UIViewController {
@@ -148,62 +70,71 @@ class DashboardVC: UIViewController {
     }
     
     @objc func measurementBtnTapped(){
+        let vc = UIHostingController(rootView: MeasurementForm())
+        
+//        presentInFullScreen(vc, animated: true)
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func createJobBtnTapped(){
         print("done 123")
+       
+    }
+    @objc func jobDeliveredBtnTapped(){
+        print("delivered 123")
+       
     }
     
     func createStackView(){
-        let imagestring = UIImage(named: "measurement")
-        let viewModel = myCustomButtnViewmodel(title: "take measurements", imagename: "cart" )
-        let buttun1: MycustomButton = {
+        
+        let measuresViewModel = myCustomButtnViewmodel(title: "TAKE",subTittle: "MEASUREMENTS", imagename: "measurement" )
+        let taskJobViewModel = myCustomButtnViewmodel(title: "JOB", subTittle: "CREATION", imagename: "imagAdd-")
+        let deliveredJobViewModel = myCustomButtnViewmodel(title: "JOBS", subTittle: "DELIVERED", imagename: "Rectangle 18")
+        
+        let measurmentButton: MycustomButton = {
             let buton = MycustomButton()
             return buton
         }()
-        
-        buttun1.configure(with: viewModel)
-        let measurmentButton = customBtnView(image: UIImage(named: "measurement")!, title: "take measurments")
+        measurmentButton.configure(with: measuresViewModel)
         measurmentButton.addTarget(self, action: #selector(self.measurementBtnTapped), for: .touchUpInside)
-        let button2 = UIButton(type: .system)
-        button2.setTitle("B 2", for: .normal)
         
-        let button3 = UIButton(type: .system)
-        button3.setTitle("B 3", for: .normal)
+        let CreateJobBtn: MycustomButton = {
+            let buton = MycustomButton()
+            return buton
+        }()
+        CreateJobBtn.configure(with: taskJobViewModel)
+        CreateJobBtn.addTarget(self, action: #selector(self.createJobBtnTapped), for: .touchUpInside)
         
-        let button4 = UIButton(type: .system)
-        button4.setTitle("B 4", for: .normal)
         
-        [buttun1,measurmentButton, button2, button3, button4].forEach {
-            $0.backgroundColor = .systemBlue
+        let JobsDeliveredBtn: MycustomButton = {
+            let buton = MycustomButton()
+            return buton
+        }()
+        JobsDeliveredBtn.configure(with: deliveredJobViewModel)
+        JobsDeliveredBtn.addTarget(self, action: #selector(self.jobDeliveredBtnTapped), for: .touchUpInside)
+        
+        
+        [measurmentButton, CreateJobBtn, JobsDeliveredBtn].forEach {
+//            $0.backgroundColor = .systemBlue
+            $0.setBackgroundImage(UIImage(named: "Rectangle 34"), for: .normal)
         }
        
-        let stackView = UIStackView(arrangedSubviews: [buttun1,measurmentButton, button2, button3, button4])
+        let stackView = UIStackView(arrangedSubviews: [measurmentButton, CreateJobBtn, JobsDeliveredBtn])
         stackView.distribution = .fillEqually
-        stackView.spacing = 16
+        stackView.spacing = 25
         stackView.axis = .vertical
 
         view.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         stackView.topAnchor.constraint(equalTo: collectionView.bottomAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
     }
-    
-    class customBtnView: UIButton {
-        let imageBtnView = UIImageView()
-        let colectiontitleLabel = UILabel()
-        init(image: UIImage, title: String){
-            imageBtnView.image = image
-            colectiontitleLabel.text = title
-            super.init(frame: .zero)
-        }
-        required init?(coder: NSCoder){
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-    }
- 
+  
   
     
     
@@ -243,6 +174,14 @@ class DashboardVC: UIViewController {
     
 
 }
+extension DashboardVC {
+    func presentInFullScreen(_ viewController: UIViewController,
+                               animated: Bool,
+                               completion: (() -> Void)? = nil) {
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: animated, completion: completion)
+      }
+}
 
 extension DashboardVC: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -253,7 +192,9 @@ extension DashboardVC: UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCollectionCell", for: indexPath)
-        cell.backgroundColor = indexPath.row % 2 == 0 ? .black : .green
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .orange : .green
+        
+        
         return cell
     }
 }

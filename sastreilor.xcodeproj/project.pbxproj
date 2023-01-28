@@ -42,6 +42,8 @@
 		BD06530A294625720017D958 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD065309294625720017D958 /* ProfileVC.swift */; };
 		BD06530D29468BE30017D958 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06530C29468BE30017D958 /* DashboardCell.swift */; };
 		BD121820294E8937005652A3 /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12181F294E8937005652A3 /* MeasurementCell.swift */; };
+		BD2F7AC22984CA2E0065BE37 /* MeasurementForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AC12984CA2E0065BE37 /* MeasurementForm.swift */; };
+		BDA0610B2983FE6A0067639E /* MycustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0610A2983FE6A0067639E /* MycustomButton.swift */; };
 		BDA437B3297A05EA009F0614 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B2297A05EA009F0614 /* Colors.swift */; };
 		BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */; };
 		BDA437B7297A30F5009F0614 /* CollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */; };
@@ -99,6 +101,8 @@
 		BD065309294625720017D958 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BD06530C29468BE30017D958 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		BD12181F294E8937005652A3 /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
+		BD2F7AC12984CA2E0065BE37 /* MeasurementForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementForm.swift; sourceTree = "<group>"; };
+		BDA0610A2983FE6A0067639E /* MycustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycustomButton.swift; sourceTree = "<group>"; };
 		BDA437B2297A05EA009F0614 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellModel.swift; sourceTree = "<group>"; };
 		BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellModel.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 			children = (
 				BD0652F7293CE8BF0017D958 /* SignInVC.swift */,
 				BD0652F9293CE9C30017D958 /* SignUpVC.swift */,
+				BD2F7AC12984CA2E0065BE37 /* MeasurementForm.swift */,
 			);
 			path = SignInSignUp;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0652FE29435B7A0017D958 /* Utilities.swift */,
+				BDA0610A2983FE6A0067639E /* MycustomButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -542,9 +548,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0653082944B8A30017D958 /* calendarVC.swift in Sources */,
+				BD2F7AC22984CA2E0065BE37 /* MeasurementForm.swift in Sources */,
 				BD0653062944B60C0017D958 /* toDoVC.swift in Sources */,
 				BD0652FF29435B7A0017D958 /* Utilities.swift in Sources */,
 				BDA437B3297A05EA009F0614 /* Colors.swift in Sources */,
+				BDA0610B2983FE6A0067639E /* MycustomButton.swift in Sources */,
 				BD0653042944B2EE0017D958 /* measurementsVC.swift in Sources */,
 				BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */,
 				BD121820294E8937005652A3 /* MeasurementCell.swift in Sources */,

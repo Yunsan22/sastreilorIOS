@@ -9,6 +9,13 @@ import UIKit
 
 class DasboardCollectionCell: UICollectionViewCell {
     
+    private let mycustomerTitleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textAlignment = .center
+        return label
+    }()
+    
     @IBOutlet weak var customerNameLabel: UILabel!
     
     @IBOutlet weak var measureImageview: UIImageView!
