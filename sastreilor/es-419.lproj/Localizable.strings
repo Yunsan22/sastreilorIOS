@@ -27,7 +27,7 @@
 "State/Providence" = "Stado/Provincia";
 "Country" = "Pais";
 "Postal Code" = "Codigo Postal";
-"Guayabera/Shirt/jacket" = "Chacabana/Camisa/Chaqueta";
+"Guayabera/Shirt/Vest/Suit Jacket" = "Chacabana/Camisa/Chaqueta/Saco";
 "Back" = "Espalda";
 "Fist Width" = "Ancho de Puño";
 "Sleeve Length" = "Largo de Manga";
@@ -36,7 +36,26 @@
 "Belly Width" = "Ancho de barriga";
 "Neck Width" = "Ancho de cuello";
 "Jacket's Length" = "Largo de chaqueta";
-
-
-
-
+"Length" = "Largo";
+"Women's Jacket/blouse/dress/skirt" = "Chaqueta-Blusa-Vestido-Falda";
+"Skirt Length" = "Largo de falda";
+"Bust Width" = "Ancho de busto";
+"Low Bust" = "Bajo busto";
+"Short Sleeve Width" = "Ancho manga corta";
+"Hight Bust" = "Alto busto";
+"Dress Length" = "Largo de Vestido";
+"armhole width" = "Ancho de sisa";
+"Bust drop" = "caida de busto";
+"Bust Separation" = "Separation de busto";
+"Hips" = "Cadera";
+"Length from bust drop to low Bust" = "Largo desde caida a bajo busto";
+"Mid Hips" = "Cadera media";
+"TAKE" = "TOMAR";
+"MEASUREMENTS" = "MEDIDAS";
+"JOB" = "TRABAJO";
+"ADD" = "AGREGAR";
+"DELIVERED" = "ENTREGADOS";
+"Customer information" = "Information del Cliente";
+"Clear All" = "Borrar Todo";
+"Are you sure you want to delete everything in the form?" = "Esta seguro que quiere borrar todo en este formulario?";
+"Short Sleeve Length" = "Largo de manga corta";

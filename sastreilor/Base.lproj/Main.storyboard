@@ -81,14 +81,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-yt-9eK">
-                                        <rect key="frame" x="0.0" y="214.33333333333337" width="289" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ah-rz-rfo">
+                                        <rect key="frame" x="0.0" y="214.33333333333337" width="289" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
+                                            <color key="baseForegroundColor" red="1" green="0.36470588240000001" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapForgotPw:" destination="1ol-cU-X2v" eventType="touchUpInside" id="0fj-Df-2Tj"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaP-cm-XXJ">
-                                        <rect key="frame" x="0.0" y="246.33333333333337" width="289" height="33"/>
+                                        <rect key="frame" x="0.0" y="256.66666666666663" width="289" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="M5e-TP-DSH"/>
                                             <constraint firstAttribute="width" constant="289" id="vex-hS-AvW"/>
@@ -104,16 +108,16 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="gAS-rU-0A6">
-                                        <rect key="frame" x="7.6666666666666572" y="287.33333333333337" width="273.66666666666674" height="34.333333333333314"/>
+                                        <rect key="frame" x="7.6666666666666572" y="297.66666666666663" width="273.66666666666674" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7q-LH-Z31">
-                                                <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbt-I0-Ae1">
-                                                <rect key="frame" x="189.66666666666669" y="0.0" width="84" height="34.333333333333336"/>
+                                                <rect key="frame" x="189.66666666666669" y="0.0" width="84" height="24"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,13 +148,15 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="uJT-yt-9eK" secondAttribute="trailing" id="Ang-bA-1zd"/>
+                                    <constraint firstItem="1ah-rz-rfo" firstAttribute="leading" secondItem="IyH-lO-n1h" secondAttribute="leading" id="2eC-eW-AEZ"/>
+                                    <constraint firstItem="QaP-cm-XXJ" firstAttribute="top" secondItem="1ah-rz-rfo" secondAttribute="bottom" constant="8" id="I1q-5a-aDV"/>
                                     <constraint firstItem="0dZ-EU-fhV" firstAttribute="top" secondItem="r0E-P3-uXe" secondAttribute="bottom" constant="8" symbolic="YES" id="JSh-AY-w1m"/>
-                                    <constraint firstItem="uJT-yt-9eK" firstAttribute="leading" secondItem="IyH-lO-n1h" secondAttribute="leading" id="Tqr-yV-p97"/>
                                     <constraint firstItem="r0E-P3-uXe" firstAttribute="top" secondItem="DiT-Wu-tlB" secondAttribute="bottom" constant="8" id="V9Q-rp-haj"/>
                                     <constraint firstItem="We2-iT-NYp" firstAttribute="top" secondItem="0dZ-EU-fhV" secondAttribute="bottom" constant="8" id="a3R-vc-agP"/>
                                     <constraint firstItem="r0E-P3-uXe" firstAttribute="leading" secondItem="IyH-lO-n1h" secondAttribute="leading" id="aYO-78-sGZ"/>
+                                    <constraint firstItem="1ah-rz-rfo" firstAttribute="top" secondItem="IfZ-jh-ndq" secondAttribute="bottom" constant="8" symbolic="YES" id="fSm-qI-Qgd"/>
                                     <constraint firstItem="We2-iT-NYp" firstAttribute="leading" secondItem="IyH-lO-n1h" secondAttribute="leading" id="h57-H6-VeC"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ah-rz-rfo" secondAttribute="trailing" id="iDY-Zu-VGm"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -178,6 +184,7 @@
                     <connections>
                         <outlet property="GoogleBtn" destination="qzV-M4-88A" id="LCR-pZ-X1V"/>
                         <outlet property="emailField" destination="0dZ-EU-fhV" id="9M0-QO-O3H"/>
+                        <outlet property="forgotPasswordBtn" destination="1ah-rz-rfo" id="dJw-SA-9Y0"/>
                         <outlet property="passwordField" destination="IfZ-jh-ndq" id="8tk-dj-4us"/>
                         <segue destination="7eJ-t7-BFj" kind="presentation" identifier="loginSegue" id="w7R-MG-Spk"/>
                     </connections>
@@ -655,9 +662,6 @@
         <image name="suit 1" width="499" height="499"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import Firebase
 import FirebaseCore
 import FirebaseFirestore
@@ -23,8 +24,9 @@ class SignInVC: UIViewController {
     
 
     @IBOutlet weak var GoogleBtn: UIButton!
+   
     
-    
+    @IBOutlet weak var forgotPasswordBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,20 @@ class SignInVC: UIViewController {
         setup()
     }
     
-  
+    @IBAction func onTapForgotPw(_ sender: Any) {
+        ForgotPWcliked()
+        
+    }
+    
+    @objc func ForgotPWcliked(){
+        let vc = UIHostingController(rootView: ForgotPasswordView())
+
+        
+        present(vc, animated: true)
+        
+//        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func OnGoogleSignInBtn(_ sender: Any) {
         
         signInWithGoogle()

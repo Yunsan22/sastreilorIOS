@@ -49,6 +49,7 @@ class Utilities {
         return result
     }
     
+   
 //    static func loadDAta(){
 //        guard let uid = Auth.auth().currentUser?.uid else {return}
 //        let db = Firestore.firestore()

@@ -70,14 +70,21 @@ class DashboardVC: UIViewController {
     }
     
     @objc func measurementBtnTapped(){
-        let vc = UIHostingController(rootView: MeasurementForm())
+//        let vc = UIHostingController(rootView: MeasurementContentView{_ in })
+        let vc = UIHostingController(rootView: CustomerDetailsContentView())
+
         
-//        presentInFullScreen(vc, animated: true)
+        presentInFullScreen(vc, animated: true)
         
-        navigationController?.pushViewController(vc, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func createJobBtnTapped(){
+//        let vc = UIHostingController(rootView: CustomersListContentView())
+//        
+////        presentInFullScreen(vc, animated: true)
+//        
+//        navigationController?.pushViewController(vc, animated: true)
         print("done 123")
        
     }
@@ -88,9 +95,9 @@ class DashboardVC: UIViewController {
     
     func createStackView(){
         
-        let measuresViewModel = myCustomButtnViewmodel(title: "TAKE",subTittle: "MEASUREMENTS", imagename: "measurement" )
-        let taskJobViewModel = myCustomButtnViewmodel(title: "JOB", subTittle: "CREATION", imagename: "imagAdd-")
-        let deliveredJobViewModel = myCustomButtnViewmodel(title: "JOBS", subTittle: "DELIVERED", imagename: "Rectangle 18")
+        let measuresViewModel = myCustomButtnViewmodel(title: NSLocalizedString("TAKE", comment: "na"),subTittle: NSLocalizedString("MEASUREMENTS", comment: "na"), imagename: "measurement" )
+        let taskJobViewModel = myCustomButtnViewmodel(title: NSLocalizedString("ADD", comment: "na"), subTittle: NSLocalizedString("JOB", comment: "na"), imagename: "imagAdd-")
+        let deliveredJobViewModel = myCustomButtnViewmodel(title: NSLocalizedString("JOB", comment: "na"), subTittle: NSLocalizedString("DELIVERED", comment: "na"), imagename: "Rectangle 18")
         
         let measurmentButton: MycustomButton = {
             let buton = MycustomButton()

@@ -42,7 +42,21 @@
 		BD06530A294625720017D958 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD065309294625720017D958 /* ProfileVC.swift */; };
 		BD06530D29468BE30017D958 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06530C29468BE30017D958 /* DashboardCell.swift */; };
 		BD121820294E8937005652A3 /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12181F294E8937005652A3 /* MeasurementCell.swift */; };
-		BD2F7AC22984CA2E0065BE37 /* MeasurementForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AC12984CA2E0065BE37 /* MeasurementForm.swift */; };
+		BD2F7AC22984CA2E0065BE37 /* CustomerDetailsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AC12984CA2E0065BE37 /* CustomerDetailsContentView.swift */; };
+		BD2F7AC62985F95D0065BE37 /* NewCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AC52985F95D0065BE37 /* NewCustomer.swift */; };
+		BD2F7AC8298617CB0065BE37 /* CreateCustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AC7298617CB0065BE37 /* CreateCustomerViewModel.swift */; };
+		BD2F7ACB2986B6390065BE37 /* CustomersMeasurementsAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7ACA2986B6390065BE37 /* CustomersMeasurementsAndDetails.swift */; };
+		BD2F7ACD2986BD150065BE37 /* CustomersListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7ACC2986BD150065BE37 /* CustomersListContentView.swift */; };
+		BD2F7ACF2986D1080065BE37 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7ACE2986D1080065BE37 /* ForgotPasswordView.swift */; };
+		BD2F7AD42986D5320065BE37 /* CustDetailsAndMeasuresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AD32986D5320065BE37 /* CustDetailsAndMeasuresService.swift */; };
+		BD2F7AD72986ED9A0065BE37 /* CustomerCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AD62986ED9A0065BE37 /* CustomerCreationViewModel.swift */; };
+		BD2F7ADC2988B6D10065BE37 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7ADB2988B6D10065BE37 /* ButtonView.swift */; };
+		BD2F7AE22989B79E0065BE37 /* MeasuresContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE12989B79E0065BE37 /* MeasuresContentView.swift */; };
+		BD2F7AE42989C2A90065BE37 /* MeasuresDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE32989C2A90065BE37 /* MeasuresDetails.swift */; };
+		BD2F7AE62989C2CF0065BE37 /* MeasuresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE52989C2CF0065BE37 /* MeasuresService.swift */; };
+		BD2F7AE82989C2F90065BE37 /* MeasuresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE72989C2F90065BE37 /* MeasuresViewModel.swift */; };
+		BD2F7AEB298A7D7D0065BE37 /* DashboardVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AEA298A7D7D0065BE37 /* DashboardVController.swift */; };
+		BD2F7AEF298D1A370065BE37 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AEE298D1A370065BE37 /* NavigationConfigurator.swift */; };
 		BDA0610B2983FE6A0067639E /* MycustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0610A2983FE6A0067639E /* MycustomButton.swift */; };
 		BDA437B3297A05EA009F0614 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B2297A05EA009F0614 /* Colors.swift */; };
 		BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */; };
@@ -101,7 +115,21 @@
 		BD065309294625720017D958 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BD06530C29468BE30017D958 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		BD12181F294E8937005652A3 /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
-		BD2F7AC12984CA2E0065BE37 /* MeasurementForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementForm.swift; sourceTree = "<group>"; };
+		BD2F7AC12984CA2E0065BE37 /* CustomerDetailsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailsContentView.swift; sourceTree = "<group>"; };
+		BD2F7AC52985F95D0065BE37 /* NewCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomer.swift; sourceTree = "<group>"; };
+		BD2F7AC7298617CB0065BE37 /* CreateCustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerViewModel.swift; sourceTree = "<group>"; };
+		BD2F7ACA2986B6390065BE37 /* CustomersMeasurementsAndDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersMeasurementsAndDetails.swift; sourceTree = "<group>"; };
+		BD2F7ACC2986BD150065BE37 /* CustomersListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersListContentView.swift; sourceTree = "<group>"; };
+		BD2F7ACE2986D1080065BE37 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		BD2F7AD32986D5320065BE37 /* CustDetailsAndMeasuresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustDetailsAndMeasuresService.swift; sourceTree = "<group>"; };
+		BD2F7AD62986ED9A0065BE37 /* CustomerCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCreationViewModel.swift; sourceTree = "<group>"; };
+		BD2F7ADB2988B6D10065BE37 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		BD2F7AE12989B79E0065BE37 /* MeasuresContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresContentView.swift; sourceTree = "<group>"; };
+		BD2F7AE32989C2A90065BE37 /* MeasuresDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresDetails.swift; sourceTree = "<group>"; };
+		BD2F7AE52989C2CF0065BE37 /* MeasuresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresService.swift; sourceTree = "<group>"; };
+		BD2F7AE72989C2F90065BE37 /* MeasuresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresViewModel.swift; sourceTree = "<group>"; };
+		BD2F7AEA298A7D7D0065BE37 /* DashboardVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVController.swift; sourceTree = "<group>"; };
+		BD2F7AEE298D1A370065BE37 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		BDA0610A2983FE6A0067639E /* MycustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycustomButton.swift; sourceTree = "<group>"; };
 		BDA437B2297A05EA009F0614 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellModel.swift; sourceTree = "<group>"; };
@@ -184,6 +212,11 @@
 		BD0652AA293B816D0017D958 /* sastreilor */ = {
 			isa = PBXGroup;
 			children = (
+				BD2F7AEC298C88730065BE37 /* ForgotPassword */,
+				BD2F7ADA2988B6AC0065BE37 /* ViewComponent */,
+				BD2F7AD82988A9E10065BE37 /* CustomerMeasurements */,
+				BD2F7AD02986D44F0065BE37 /* Customers */,
+				BD2F7AC92986B5F40065BE37 /* Models */,
 				BD06530B29468BA50017D958 /* Cells */,
 				BD065302294401350017D958 /* ViewControllers */,
 				BD0652FD29435B560017D958 /* Helpers */,
@@ -223,7 +256,6 @@
 			children = (
 				BD0652F7293CE8BF0017D958 /* SignInVC.swift */,
 				BD0652F9293CE9C30017D958 /* SignUpVC.swift */,
-				BD2F7AC12984CA2E0065BE37 /* MeasurementForm.swift */,
 			);
 			path = SignInSignUp;
 			sourceTree = "<group>";
@@ -233,6 +265,8 @@
 			children = (
 				BD0652FE29435B7A0017D958 /* Utilities.swift */,
 				BDA0610A2983FE6A0067639E /* MycustomButton.swift */,
+				BD2F7AC52985F95D0065BE37 /* NewCustomer.swift */,
+				BD2F7AEE298D1A370065BE37 /* NavigationConfigurator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -247,6 +281,8 @@
 				BD0653072944B8A30017D958 /* calendarVC.swift */,
 				BD065309294625720017D958 /* ProfileVC.swift */,
 				BDDBC5FE295DEFC100D28203 /* TakeMeasurementVC.swift */,
+				BD2F7ACC2986BD150065BE37 /* CustomersListContentView.swift */,
+				BD2F7AEA298A7D7D0065BE37 /* DashboardVController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -258,10 +294,128 @@
 				BD12181F294E8937005652A3 /* MeasurementCell.swift */,
 				BDDBC600295F34E600D28203 /* DasboardCollectionCell.swift */,
 				BDDBC602295F55E900D28203 /* DashboardButtonCell.swift */,
-				BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */,
-				BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BD2F7AC92986B5F40065BE37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */,
+				BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */,
+				BD2F7AC7298617CB0065BE37 /* CreateCustomerViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD2F7AD02986D44F0065BE37 /* Customers */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AD92988AA290065BE37 /* ContentView */,
+				BD2F7AD52986ED390065BE37 /* ViewModel */,
+				BD2F7AD22986D5010065BE37 /* Service */,
+				BD2F7AD12986D4730065BE37 /* Model */,
+			);
+			path = Customers;
+			sourceTree = "<group>";
+		};
+		BD2F7AD12986D4730065BE37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7ACA2986B6390065BE37 /* CustomersMeasurementsAndDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD2F7AD22986D5010065BE37 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AD32986D5320065BE37 /* CustDetailsAndMeasuresService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BD2F7AD52986ED390065BE37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AD62986ED9A0065BE37 /* CustomerCreationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD2F7AD82988A9E10065BE37 /* CustomerMeasurements */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7ADD2989B6DD0065BE37 /* contentView */,
+				BD2F7ADE2989B6E90065BE37 /* ViewModel */,
+				BD2F7ADF2989B6F70065BE37 /* Service */,
+				BD2F7AE02989B7030065BE37 /* Model */,
+			);
+			path = CustomerMeasurements;
+			sourceTree = "<group>";
+		};
+		BD2F7AD92988AA290065BE37 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AC12984CA2E0065BE37 /* CustomerDetailsContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		BD2F7ADA2988B6AC0065BE37 /* ViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7ADB2988B6D10065BE37 /* ButtonView.swift */,
+			);
+			path = ViewComponent;
+			sourceTree = "<group>";
+		};
+		BD2F7ADD2989B6DD0065BE37 /* contentView */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AE12989B79E0065BE37 /* MeasuresContentView.swift */,
+			);
+			path = contentView;
+			sourceTree = "<group>";
+		};
+		BD2F7ADE2989B6E90065BE37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AE72989C2F90065BE37 /* MeasuresViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD2F7ADF2989B6F70065BE37 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AE52989C2CF0065BE37 /* MeasuresService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BD2F7AE02989B7030065BE37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AE32989C2A90065BE37 /* MeasuresDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD2F7AEC298C88730065BE37 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AED298C88A20065BE37 /* ContenView */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		BD2F7AED298C88A20065BE37 /* ContenView */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7ACE2986D1080065BE37 /* ForgotPasswordView.swift */,
+			);
+			path = ContenView;
 			sourceTree = "<group>";
 		};
 		C518D1FA1E43B24E6D5F06DB /* Pods */ = {
@@ -548,25 +702,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0653082944B8A30017D958 /* calendarVC.swift in Sources */,
-				BD2F7AC22984CA2E0065BE37 /* MeasurementForm.swift in Sources */,
+				BD2F7AC22984CA2E0065BE37 /* CustomerDetailsContentView.swift in Sources */,
 				BD0653062944B60C0017D958 /* toDoVC.swift in Sources */,
+				BD2F7AE42989C2A90065BE37 /* MeasuresDetails.swift in Sources */,
 				BD0652FF29435B7A0017D958 /* Utilities.swift in Sources */,
 				BDA437B3297A05EA009F0614 /* Colors.swift in Sources */,
+				BD2F7AE62989C2CF0065BE37 /* MeasuresService.swift in Sources */,
+				BD2F7AD72986ED9A0065BE37 /* CustomerCreationViewModel.swift in Sources */,
 				BDA0610B2983FE6A0067639E /* MycustomButton.swift in Sources */,
 				BD0653042944B2EE0017D958 /* measurementsVC.swift in Sources */,
+				BD2F7ACB2986B6390065BE37 /* CustomersMeasurementsAndDetails.swift in Sources */,
+				BD2F7ACF2986D1080065BE37 /* ForgotPasswordView.swift in Sources */,
 				BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */,
+				BD2F7AE82989C2F90065BE37 /* MeasuresViewModel.swift in Sources */,
+				BD2F7ACD2986BD150065BE37 /* CustomersListContentView.swift in Sources */,
 				BD121820294E8937005652A3 /* MeasurementCell.swift in Sources */,
+				BD2F7AE22989B79E0065BE37 /* MeasuresContentView.swift in Sources */,
+				BD2F7ADC2988B6D10065BE37 /* ButtonView.swift in Sources */,
 				BD0652B0293B816D0017D958 /* ViewController.swift in Sources */,
+				BD2F7AC62985F95D0065BE37 /* NewCustomer.swift in Sources */,
 				BD0653012944012A0017D958 /* DashboardVC.swift in Sources */,
+				BD2F7AD42986D5320065BE37 /* CustDetailsAndMeasuresService.swift in Sources */,
 				BD0652AC293B816D0017D958 /* AppDelegate.swift in Sources */,
 				BDDBC603295F55E900D28203 /* DashboardButtonCell.swift in Sources */,
 				BD0652F8293CE8BF0017D958 /* SignInVC.swift in Sources */,
+				BD2F7AC8298617CB0065BE37 /* CreateCustomerViewModel.swift in Sources */,
 				BDDBC601295F34E600D28203 /* DasboardCollectionCell.swift in Sources */,
 				BDA437B7297A30F5009F0614 /* CollectionViewCellModel.swift in Sources */,
 				BD0652FA293CE9C30017D958 /* SignUpVC.swift in Sources */,
 				BDDBC5FF295DEFC100D28203 /* TakeMeasurementVC.swift in Sources */,
 				BD06530A294625720017D958 /* ProfileVC.swift in Sources */,
+				BD2F7AEB298A7D7D0065BE37 /* DashboardVController.swift in Sources */,
 				BD06530D29468BE30017D958 /* DashboardCell.swift in Sources */,
+				BD2F7AEF298D1A370065BE37 /* NavigationConfigurator.swift in Sources */,
 				BD0652AE293B816D0017D958 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -765,7 +933,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -795,7 +963,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
