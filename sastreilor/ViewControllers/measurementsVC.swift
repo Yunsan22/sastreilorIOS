@@ -27,10 +27,11 @@ class measurementsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        overrideUserInterfaceStyle = .dark
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         addSwiftUIView()
+        self.hidesBottomBarWhenPushed = true
 
     }
     

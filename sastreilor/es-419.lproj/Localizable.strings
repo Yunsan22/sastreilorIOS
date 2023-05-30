@@ -8,7 +8,8 @@
 "All fields are required to Sign up" = "Es necesario llenar todos los campos para registrarte";
 
 "Passwords do not Match" = "Las contraseñas no son iguales";
-
+"Send Password Reset" = "Restablecer contraseña";
+"Reset Password" = "Restablecer contraseña";
 "Please make sure your password is at least 8 charaters, contains uppercase letters, special charaters and a number" = "Por favor asegurese que su contraseña tiene almenos 8 caracteres, contenga mayusculas, menisculas,caracteres speciales y almenos un numero";
 "Please enter a valid Email" = "Por favor entre un correo electronico valido";
 "All fields are required to Sign In" = "Todos los campos son requeridos para iniciar session";
@@ -35,7 +36,7 @@
 "Chest Width" = "Ancho de pecho";
 "Belly Width" = "Ancho de barriga";
 "Neck Width" = "Ancho de cuello";
-"Jacket's Length" = "Largo de chaqueta";
+"Vest's Length" = "Largo de chaqueta";
 "Length" = "Largo";
 "Women's Jacket/blouse/dress/skirt" = "Chaqueta-Blusa-Vestido-Falda";
 "Skirt Length" = "Largo de falda";
@@ -59,3 +60,18 @@
 "Clear All" = "Borrar Todo";
 "Are you sure you want to delete everything in the form?" = "Esta seguro que quiere borrar todo en este formulario?";
 "Short Sleeve Length" = "Largo de manga corta";
+"name" = "ntere";
+"fly" = "Bragueta";
+"Knee" = "rodilla";
+"Trouser Roll" = "Ruedo";
+"Rear knucle length" = "Largo fundillo trasero";
+"Armhole length" = "Largo de sisa";
+"Back waist Length" = "talle trasero";
+"Back overall length" = "largo total trasero";
+"Armhole width" = "Ancho de sisa";
+"Armhole rounded width" = "ancho de sisa redondo";
+"Front length" = "largo delantero";
+"Base/Hips" = "Base o Cadera";
+"Shoulder width" = "Ancho de hombros";
+"Save and Continue" = "Guarda y continue";
+"If you go back before saving all data will be lost" = "Si vuelve a la pantalla anterior todo el progreso en este formulario sera perdido";

@@ -18,14 +18,14 @@ enum MeasuresKeys: String {
     case fistWidth
 }
 
-protocol MeasuresService {
-    func createMeasures(with DetailsMeasures: MeasuresDetails) -> AnyPublisher<Void, Error>
+protocol SuitMeasuresService {
+    func createMeasures(with DetailsMeasures: SuitMeasuresDetails) -> AnyPublisher<Void, Error>
 }
 
-final class MeasuresServiceImpl: MeasuresService {
+final class MeasuresServiceImpl: SuitMeasuresService {
     
     
-    func createMeasures(with DetailsMeasures: MeasuresDetails) -> AnyPublisher<Void, Error> {
+    func createMeasures(with DetailsMeasures: SuitMeasuresDetails) -> AnyPublisher<Void, Error> {
         Deferred {
             
             Future { promise in

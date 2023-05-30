@@ -49,14 +49,25 @@ class DashboardVC: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        overrideUserInterfaceStyle = .dark
         // Do any additional setup after loading the view.
-        CreateCollectionview()
-        createStackView()
+        addSwiftUIView()
+        
+        
+//        CreateCollectionview()
+//        createStackView()
     }
+    
+    
+    func addSwiftUIView() {
+        let swiftUIView = DashboardContentView()
+        addSubSwiftUIView(swiftUIView, to: view)
+    }
+    
     func CreateCollectionview(){
         view.addSubview(collectionView)
         collectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
@@ -70,13 +81,14 @@ class DashboardVC: UIViewController {
     }
     
     @objc func measurementBtnTapped(){
-//        let vc = UIHostingController(rootView: MeasurementContentView{_ in })
-        let vc = UIHostingController(rootView: CustomerDetailsContentView())
-
-        
-        presentInFullScreen(vc, animated: true)
-        
-//        navigationController?.pushViewController(vc, animated: true)
+////        let vc = UIHostingController(rootView: MeasurementContentView{_ in })
+//        let vc = UIHostingController(rootView: CustomerDetailsContentView())
+////        let vc = UIHostingController(rootView: theView())
+//
+//
+//        presentInFullScreen(vc, animated: true)
+//
+////        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func createJobBtnTapped(){
@@ -246,3 +258,34 @@ extension DashboardVC: UICollectionViewDataSource{
 //
 //
 //}
+extension DashboardVC {
+
+    /// Add a SwiftUI `View` as a child of the input `UIView`.
+    /// - Parameters:
+    ///   - swiftUIView: The SwiftUI `View` to add as a child.
+    ///   - view: The `UIView` instance to which the view should be added.
+    func addSubSwiftUIView<Content>(_ swiftUIView: Content, to view: UIView) where Content : View {
+        let hostingController = UIHostingController(rootView: swiftUIView)
+
+        /// Add as a child of the current view controller.
+        addChild(hostingController)
+
+        /// Add the SwiftUI view to the view controller view hierarchy.
+        view.addSubview(hostingController.view)
+
+        /// Setup the contraints to update the SwiftUI view boundaries.
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            view.bottomAnchor.constraint(equalTo: hostingController.view.bottomAnchor),
+            view.rightAnchor.constraint(equalTo: hostingController.view.rightAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+
+        /// Notify the hosting controller that it has been moved to the current view controller.
+        hostingController.didMove(toParent: self)
+    }
+}
+

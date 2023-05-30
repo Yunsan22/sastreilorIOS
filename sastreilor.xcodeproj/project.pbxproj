@@ -52,16 +52,35 @@
 		BD2F7AD72986ED9A0065BE37 /* CustomerCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AD62986ED9A0065BE37 /* CustomerCreationViewModel.swift */; };
 		BD2F7ADC2988B6D10065BE37 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7ADB2988B6D10065BE37 /* ButtonView.swift */; };
 		BD2F7AE22989B79E0065BE37 /* MeasuresContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE12989B79E0065BE37 /* MeasuresContentView.swift */; };
-		BD2F7AE42989C2A90065BE37 /* MeasuresDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE32989C2A90065BE37 /* MeasuresDetails.swift */; };
-		BD2F7AE62989C2CF0065BE37 /* MeasuresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE52989C2CF0065BE37 /* MeasuresService.swift */; };
+		BD2F7AE42989C2A90065BE37 /* SuitMeasuresDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE32989C2A90065BE37 /* SuitMeasuresDetails.swift */; };
+		BD2F7AE62989C2CF0065BE37 /* SuitMeasuresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE52989C2CF0065BE37 /* SuitMeasuresService.swift */; };
 		BD2F7AE82989C2F90065BE37 /* MeasuresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AE72989C2F90065BE37 /* MeasuresViewModel.swift */; };
 		BD2F7AEB298A7D7D0065BE37 /* DashboardVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AEA298A7D7D0065BE37 /* DashboardVController.swift */; };
 		BD2F7AEF298D1A370065BE37 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AEE298D1A370065BE37 /* NavigationConfigurator.swift */; };
+		BD2F7AF1298E81DD0065BE37 /* CloseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AF0298E81DC0065BE37 /* CloseModifier.swift */; };
+		BD2F7AF3298E879E0065BE37 /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AF2298E879E0065BE37 /* InputTextFieldView.swift */; };
+		BD2F7AF5298E8BD80065BE37 /* PreviewLayoutComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AF4298E8BD80065BE37 /* PreviewLayoutComponentModifier.swift */; };
+		BD2F7AF9298EBBF70065BE37 /* MenMeasuresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AF8298EBBF60065BE37 /* MenMeasuresView.swift */; };
+		BD2F7AFB298EC2EA0065BE37 /* theView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F7AFA298EC2EA0065BE37 /* theView.swift */; };
 		BDA0610B2983FE6A0067639E /* MycustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0610A2983FE6A0067639E /* MycustomButton.swift */; };
 		BDA437B3297A05EA009F0614 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B2297A05EA009F0614 /* Colors.swift */; };
 		BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */; };
 		BDA437B7297A30F5009F0614 /* CollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA437B6297A30F5009F0614 /* CollectionViewCellModel.swift */; };
 		BDAB4DA9294B208700803B67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDAB4DAB294B208700803B67 /* Localizable.strings */; };
+		BDCE711A298FE4C700A16560 /* MensComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE7119298FE4C700A16560 /* MensComponent.swift */; };
+		BDCE711C298FE6BF00A16560 /* MenSuitsMeasuresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE711B298FE6BF00A16560 /* MenSuitsMeasuresView.swift */; };
+		BDCE711E29906EDD00A16560 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE711D29906EDD00A16560 /* Styles.swift */; };
+		BDCE71212990768700A16560 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE71202990768700A16560 /* ProfileView.swift */; };
+		BDCE71252991AB2300A16560 /* DashboardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE71242991AB2300A16560 /* DashboardContentView.swift */; };
+		BDCE71272991F73700A16560 /* ItemsDue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE71262991F73700A16560 /* ItemsDue.swift */; };
+		BDCE71292991FDBD00A16560 /* ShirtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE71282991FDBC00A16560 /* ShirtView.swift */; };
+		BDCE712C299265A800A16560 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE712B299265A800A16560 /* NavigationBar.swift */; };
+		BDCE712E299329C400A16560 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE712D299329C300A16560 /* PreferenceKeys.swift */; };
+		BDCE713029933F9600A16560 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE712F29933F9600A16560 /* AnimatableFontModifier.swift */; };
+		BDCE71342993CA9600A16560 /* TakeMeasuresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE71332993CA9600A16560 /* TakeMeasuresView.swift */; };
+		BDCE713C2995003000A16560 /* MamShirtMeasuresDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE713B2995003000A16560 /* MamShirtMeasuresDetails.swift */; };
+		BDCE713E2995004900A16560 /* ManVestMeasuresDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE713D2995004900A16560 /* ManVestMeasuresDetails.swift */; };
+		BDCE71402995005F00A16560 /* ManCacabaMeasuresDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE713F2995005F00A16560 /* ManCacabaMeasuresDetails.swift */; };
 		BDDBC5FF295DEFC100D28203 /* TakeMeasurementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBC5FE295DEFC100D28203 /* TakeMeasurementVC.swift */; };
 		BDDBC601295F34E600D28203 /* DasboardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBC600295F34E600D28203 /* DasboardCollectionCell.swift */; };
 		BDDBC603295F55E900D28203 /* DashboardButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBC602295F55E900D28203 /* DashboardButtonCell.swift */; };
@@ -125,11 +144,16 @@
 		BD2F7AD62986ED9A0065BE37 /* CustomerCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCreationViewModel.swift; sourceTree = "<group>"; };
 		BD2F7ADB2988B6D10065BE37 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		BD2F7AE12989B79E0065BE37 /* MeasuresContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresContentView.swift; sourceTree = "<group>"; };
-		BD2F7AE32989C2A90065BE37 /* MeasuresDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresDetails.swift; sourceTree = "<group>"; };
-		BD2F7AE52989C2CF0065BE37 /* MeasuresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresService.swift; sourceTree = "<group>"; };
+		BD2F7AE32989C2A90065BE37 /* SuitMeasuresDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitMeasuresDetails.swift; sourceTree = "<group>"; };
+		BD2F7AE52989C2CF0065BE37 /* SuitMeasuresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitMeasuresService.swift; sourceTree = "<group>"; };
 		BD2F7AE72989C2F90065BE37 /* MeasuresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresViewModel.swift; sourceTree = "<group>"; };
 		BD2F7AEA298A7D7D0065BE37 /* DashboardVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVController.swift; sourceTree = "<group>"; };
 		BD2F7AEE298D1A370065BE37 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		BD2F7AF0298E81DC0065BE37 /* CloseModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseModifier.swift; sourceTree = "<group>"; };
+		BD2F7AF2298E879E0065BE37 /* InputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
+		BD2F7AF4298E8BD80065BE37 /* PreviewLayoutComponentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLayoutComponentModifier.swift; sourceTree = "<group>"; };
+		BD2F7AF8298EBBF60065BE37 /* MenMeasuresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenMeasuresView.swift; sourceTree = "<group>"; };
+		BD2F7AFA298EC2EA0065BE37 /* theView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theView.swift; sourceTree = "<group>"; };
 		BDA0610A2983FE6A0067639E /* MycustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycustomButton.swift; sourceTree = "<group>"; };
 		BDA437B2297A05EA009F0614 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BDA437B4297A2ECD009F0614 /* tableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellModel.swift; sourceTree = "<group>"; };
@@ -137,6 +161,20 @@
 		BDAB4DA6294B1FE400803B67 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
 		BDAB4DAA294B208700803B67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDAB4DAC294B209300803B67 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BDCE7119298FE4C700A16560 /* MensComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensComponent.swift; sourceTree = "<group>"; };
+		BDCE711B298FE6BF00A16560 /* MenSuitsMeasuresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenSuitsMeasuresView.swift; sourceTree = "<group>"; };
+		BDCE711D29906EDD00A16560 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		BDCE71202990768700A16560 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BDCE71242991AB2300A16560 /* DashboardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardContentView.swift; sourceTree = "<group>"; };
+		BDCE71262991F73700A16560 /* ItemsDue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDue.swift; sourceTree = "<group>"; };
+		BDCE71282991FDBC00A16560 /* ShirtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShirtView.swift; sourceTree = "<group>"; };
+		BDCE712B299265A800A16560 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		BDCE712D299329C300A16560 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
+		BDCE712F29933F9600A16560 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
+		BDCE71332993CA9600A16560 /* TakeMeasuresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeMeasuresView.swift; sourceTree = "<group>"; };
+		BDCE713B2995003000A16560 /* MamShirtMeasuresDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MamShirtMeasuresDetails.swift; sourceTree = "<group>"; };
+		BDCE713D2995004900A16560 /* ManVestMeasuresDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManVestMeasuresDetails.swift; sourceTree = "<group>"; };
+		BDCE713F2995005F00A16560 /* ManCacabaMeasuresDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManCacabaMeasuresDetails.swift; sourceTree = "<group>"; };
 		BDDBC5FE295DEFC100D28203 /* TakeMeasurementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeMeasurementVC.swift; sourceTree = "<group>"; };
 		BDDBC600295F34E600D28203 /* DasboardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasboardCollectionCell.swift; sourceTree = "<group>"; };
 		BDDBC602295F55E900D28203 /* DashboardButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardButtonCell.swift; sourceTree = "<group>"; };
@@ -212,6 +250,10 @@
 		BD0652AA293B816D0017D958 /* sastreilor */ = {
 			isa = PBXGroup;
 			children = (
+				BDCE71312993CA5000A16560 /* takeMeasures */,
+				BDCE712A2992658800A16560 /* Navigation */,
+				BDCE71222991AAE800A16560 /* Dashboard */,
+				BDCE711F299075E400A16560 /* ProfileViews */,
 				BD2F7AEC298C88730065BE37 /* ForgotPassword */,
 				BD2F7ADA2988B6AC0065BE37 /* ViewComponent */,
 				BD2F7AD82988A9E10065BE37 /* CustomerMeasurements */,
@@ -267,6 +309,12 @@
 				BDA0610A2983FE6A0067639E /* MycustomButton.swift */,
 				BD2F7AC52985F95D0065BE37 /* NewCustomer.swift */,
 				BD2F7AEE298D1A370065BE37 /* NavigationConfigurator.swift */,
+				BD2F7AF0298E81DC0065BE37 /* CloseModifier.swift */,
+				BD2F7AF2298E879E0065BE37 /* InputTextFieldView.swift */,
+				BD2F7AF4298E8BD80065BE37 /* PreviewLayoutComponentModifier.swift */,
+				BDCE711D29906EDD00A16560 /* Styles.swift */,
+				BDCE712D299329C300A16560 /* PreferenceKeys.swift */,
+				BDCE712F29933F9600A16560 /* AnimatableFontModifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -275,14 +323,13 @@
 			isa = PBXGroup;
 			children = (
 				BD0652F6293CE84D0017D958 /* SignInSignUp */,
-				BD0653002944012A0017D958 /* DashboardVC.swift */,
 				BD0653032944B2EE0017D958 /* measurementsVC.swift */,
 				BD0653052944B60C0017D958 /* toDoVC.swift */,
 				BD0653072944B8A30017D958 /* calendarVC.swift */,
-				BD065309294625720017D958 /* ProfileVC.swift */,
 				BDDBC5FE295DEFC100D28203 /* TakeMeasurementVC.swift */,
 				BD2F7ACC2986BD150065BE37 /* CustomersListContentView.swift */,
 				BD2F7AEA298A7D7D0065BE37 /* DashboardVController.swift */,
+				BD2F7AFA298EC2EA0065BE37 /* theView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -346,10 +393,11 @@
 		BD2F7AD82988A9E10065BE37 /* CustomerMeasurements */ = {
 			isa = PBXGroup;
 			children = (
+				BDCE71372994FE9300A16560 /* ManChacabaMeasures */,
+				BDCE71362994FE7C00A16560 /* ManVestMeasures */,
+				BDCE71352994FE6A00A16560 /* ManShirtMeasures */,
+				BD2F7AF6298EBB660065BE37 /* ManSuitMeasures */,
 				BD2F7ADD2989B6DD0065BE37 /* contentView */,
-				BD2F7ADE2989B6E90065BE37 /* ViewModel */,
-				BD2F7ADF2989B6F70065BE37 /* Service */,
-				BD2F7AE02989B7030065BE37 /* Model */,
 			);
 			path = CustomerMeasurements;
 			sourceTree = "<group>";
@@ -366,6 +414,9 @@
 			isa = PBXGroup;
 			children = (
 				BD2F7ADB2988B6D10065BE37 /* ButtonView.swift */,
+				BDCE7119298FE4C700A16560 /* MensComponent.swift */,
+				BDCE71262991F73700A16560 /* ItemsDue.swift */,
+				BDCE71282991FDBC00A16560 /* ShirtView.swift */,
 			);
 			path = ViewComponent;
 			sourceTree = "<group>";
@@ -389,7 +440,7 @@
 		BD2F7ADF2989B6F70065BE37 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				BD2F7AE52989C2CF0065BE37 /* MeasuresService.swift */,
+				BD2F7AE52989C2CF0065BE37 /* SuitMeasuresService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -397,7 +448,7 @@
 		BD2F7AE02989B7030065BE37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD2F7AE32989C2A90065BE37 /* MeasuresDetails.swift */,
+				BD2F7AE32989C2A90065BE37 /* SuitMeasuresDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +467,124 @@
 				BD2F7ACE2986D1080065BE37 /* ForgotPasswordView.swift */,
 			);
 			path = ContenView;
+			sourceTree = "<group>";
+		};
+		BD2F7AF6298EBB660065BE37 /* ManSuitMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AF7298EBBCB0065BE37 /* ContentViews */,
+				BD2F7ADE2989B6E90065BE37 /* ViewModel */,
+				BD2F7ADF2989B6F70065BE37 /* Service */,
+				BD2F7AE02989B7030065BE37 /* Model */,
+			);
+			path = ManSuitMeasures;
+			sourceTree = "<group>";
+		};
+		BD2F7AF7298EBBCB0065BE37 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F7AF8298EBBF60065BE37 /* MenMeasuresView.swift */,
+				BDCE711B298FE6BF00A16560 /* MenSuitsMeasuresView.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		BDCE711F299075E400A16560 /* ProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				BD065309294625720017D958 /* ProfileVC.swift */,
+				BDCE71202990768700A16560 /* ProfileView.swift */,
+			);
+			path = ProfileViews;
+			sourceTree = "<group>";
+		};
+		BDCE71222991AAE800A16560 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE71232991AB0100A16560 /* contentView */,
+				BD0653002944012A0017D958 /* DashboardVC.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BDCE71232991AB0100A16560 /* contentView */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE71242991AB2300A16560 /* DashboardContentView.swift */,
+			);
+			path = contentView;
+			sourceTree = "<group>";
+		};
+		BDCE712A2992658800A16560 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE712B299265A800A16560 /* NavigationBar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		BDCE71312993CA5000A16560 /* takeMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE71322993CA6300A16560 /* ContentView */,
+			);
+			path = takeMeasures;
+			sourceTree = "<group>";
+		};
+		BDCE71322993CA6300A16560 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE71332993CA9600A16560 /* TakeMeasuresView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		BDCE71352994FE6A00A16560 /* ManShirtMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE71382994FFCD00A16560 /* ViewModel */,
+			);
+			path = ManShirtMeasures;
+			sourceTree = "<group>";
+		};
+		BDCE71362994FE7C00A16560 /* ManVestMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE71392994FFDC00A16560 /* ViewModel */,
+			);
+			path = ManVestMeasures;
+			sourceTree = "<group>";
+		};
+		BDCE71372994FE9300A16560 /* ManChacabaMeasures */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE713A2994FFE500A16560 /* ViewModel */,
+			);
+			path = ManChacabaMeasures;
+			sourceTree = "<group>";
+		};
+		BDCE71382994FFCD00A16560 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE713B2995003000A16560 /* MamShirtMeasuresDetails.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BDCE71392994FFDC00A16560 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE713D2995004900A16560 /* ManVestMeasuresDetails.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BDCE713A2994FFE500A16560 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDCE713F2995005F00A16560 /* ManCacabaMeasuresDetails.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C518D1FA1E43B24E6D5F06DB /* Pods */ = {
@@ -701,41 +870,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCE713C2995003000A16560 /* MamShirtMeasuresDetails.swift in Sources */,
 				BD0653082944B8A30017D958 /* calendarVC.swift in Sources */,
 				BD2F7AC22984CA2E0065BE37 /* CustomerDetailsContentView.swift in Sources */,
 				BD0653062944B60C0017D958 /* toDoVC.swift in Sources */,
-				BD2F7AE42989C2A90065BE37 /* MeasuresDetails.swift in Sources */,
+				BD2F7AE42989C2A90065BE37 /* SuitMeasuresDetails.swift in Sources */,
 				BD0652FF29435B7A0017D958 /* Utilities.swift in Sources */,
 				BDA437B3297A05EA009F0614 /* Colors.swift in Sources */,
-				BD2F7AE62989C2CF0065BE37 /* MeasuresService.swift in Sources */,
+				BD2F7AE62989C2CF0065BE37 /* SuitMeasuresService.swift in Sources */,
 				BD2F7AD72986ED9A0065BE37 /* CustomerCreationViewModel.swift in Sources */,
+				BDCE711C298FE6BF00A16560 /* MenSuitsMeasuresView.swift in Sources */,
 				BDA0610B2983FE6A0067639E /* MycustomButton.swift in Sources */,
 				BD0653042944B2EE0017D958 /* measurementsVC.swift in Sources */,
 				BD2F7ACB2986B6390065BE37 /* CustomersMeasurementsAndDetails.swift in Sources */,
+				BD2F7AF1298E81DD0065BE37 /* CloseModifier.swift in Sources */,
 				BD2F7ACF2986D1080065BE37 /* ForgotPasswordView.swift in Sources */,
 				BDA437B5297A2ECD009F0614 /* tableViewCellModel.swift in Sources */,
 				BD2F7AE82989C2F90065BE37 /* MeasuresViewModel.swift in Sources */,
 				BD2F7ACD2986BD150065BE37 /* CustomersListContentView.swift in Sources */,
 				BD121820294E8937005652A3 /* MeasurementCell.swift in Sources */,
+				BD2F7AF5298E8BD80065BE37 /* PreviewLayoutComponentModifier.swift in Sources */,
 				BD2F7AE22989B79E0065BE37 /* MeasuresContentView.swift in Sources */,
+				BDCE71212990768700A16560 /* ProfileView.swift in Sources */,
 				BD2F7ADC2988B6D10065BE37 /* ButtonView.swift in Sources */,
 				BD0652B0293B816D0017D958 /* ViewController.swift in Sources */,
 				BD2F7AC62985F95D0065BE37 /* NewCustomer.swift in Sources */,
 				BD0653012944012A0017D958 /* DashboardVC.swift in Sources */,
+				BDCE71252991AB2300A16560 /* DashboardContentView.swift in Sources */,
+				BDCE711A298FE4C700A16560 /* MensComponent.swift in Sources */,
 				BD2F7AD42986D5320065BE37 /* CustDetailsAndMeasuresService.swift in Sources */,
 				BD0652AC293B816D0017D958 /* AppDelegate.swift in Sources */,
 				BDDBC603295F55E900D28203 /* DashboardButtonCell.swift in Sources */,
 				BD0652F8293CE8BF0017D958 /* SignInVC.swift in Sources */,
+				BDCE711E29906EDD00A16560 /* Styles.swift in Sources */,
 				BD2F7AC8298617CB0065BE37 /* CreateCustomerViewModel.swift in Sources */,
+				BD2F7AF9298EBBF70065BE37 /* MenMeasuresView.swift in Sources */,
 				BDDBC601295F34E600D28203 /* DasboardCollectionCell.swift in Sources */,
+				BDCE712C299265A800A16560 /* NavigationBar.swift in Sources */,
 				BDA437B7297A30F5009F0614 /* CollectionViewCellModel.swift in Sources */,
 				BD0652FA293CE9C30017D958 /* SignUpVC.swift in Sources */,
+				BDCE712E299329C400A16560 /* PreferenceKeys.swift in Sources */,
 				BDDBC5FF295DEFC100D28203 /* TakeMeasurementVC.swift in Sources */,
 				BD06530A294625720017D958 /* ProfileVC.swift in Sources */,
+				BDCE71342993CA9600A16560 /* TakeMeasuresView.swift in Sources */,
+				BDCE71402995005F00A16560 /* ManCacabaMeasuresDetails.swift in Sources */,
+				BDCE71272991F73700A16560 /* ItemsDue.swift in Sources */,
 				BD2F7AEB298A7D7D0065BE37 /* DashboardVController.swift in Sources */,
+				BDCE713029933F9600A16560 /* AnimatableFontModifier.swift in Sources */,
 				BD06530D29468BE30017D958 /* DashboardCell.swift in Sources */,
+				BDCE713E2995004900A16560 /* ManVestMeasuresDetails.swift in Sources */,
+				BD2F7AFB298EC2EA0065BE37 /* theView.swift in Sources */,
 				BD2F7AEF298D1A370065BE37 /* NavigationConfigurator.swift in Sources */,
 				BD0652AE293B816D0017D958 /* SceneDelegate.swift in Sources */,
+				BD2F7AF3298E879E0065BE37 /* InputTextFieldView.swift in Sources */,
+				BDCE71292991FDBD00A16560 /* ShirtView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,175 +9,222 @@ import SwiftUI
 
 struct CustomerDetailsContentView: View {
     
-    @State private var shouldShowMeasures = false
-    @State private var displayPopupMessage: Bool = false
-    
     @StateObject private var viewModel = CustomerCreationViewModelImpl(
         service: CustDetailsAndMeasuresServiceImpl()
     )
+    
+    var namespace: Namespace.ID
+    @Binding var shouldShowDashboard: Bool
+//    @Namespace var namespace
+//    @State var shouldShowDashboard = false
+    @State private var displayPopupMessage: Bool = false
+    
+    
+    @State private var shouldShowMeasures = false
+    
+    
+    @State var showStatusBar = true
+    
+    
+    
+    
+    //    @Binding var show: Bool
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.presentationMode) var presentationMode
     
     
-    //    @StateObject private var viewModel = CreateCustomerViewModel()
-    //    let action: (_ customer: NewCustomer) -> Void
     
-    init(){
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.green]
-//
-//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.green]
-    }
     var body: some View {
-        NavigationView {
-            
-            ZStack {
+        
+        ZStack{
+            ScrollView {
+//                if !shouldShowDashboard {
+                    customerPrimaryInfo
+//                        .onTapGesture {
+//                            withAnimation(.spring(response: 0.6,dampingFraction: 0.8) ) {
+//                                shouldShowDashboard.toggle()
+//                            }
+//
+//                        }
+
+//                }
                
-                VStack {
-                    Form {
-                        
-                        clientInfo
-                        address
-                        //                butonview
-                        //                manShirtsMeasurments
-                        //                womanShirtsMeasurments
-                        //                pantsMeasurments
-                        clearAll
-                        
-                    }
-                }
-                ZStack{
-                    RoundedRectangle(cornerRadius: 30,style: .continuous).foregroundStyle(.linearGradient(colors: [.blue,.black], startPoint: .topLeading, endPoint: .bottomTrailing)).frame(width: 900,height: 400)
-                        .rotationEffect(.degrees(135))
-                        .offset(y:-365)
-                }.layoutPriority(-1)
                
             }
-            
             .preferredColorScheme(.dark)
-            .navigationTitle("Part 1")
-            .toolbar {
-                
-                ToolbarItem(placement: .confirmationAction) {
-                    
-                    Button("Next") {
-                        shouldShowMeasures.toggle()
-
-                        //this below save to Firebase
-                        //trying alternative way to save to firestore
-                        viewModel.custumerCreation()
-
-                        //dismmiss
-//                        handleDismissal()
-                        
-                    }
-                
-                    .fullScreenCover(isPresented: $shouldShowMeasures, content: {
-                        
-                        MeasuresContentView()
-                       
-                    })
-                    .disabled(!viewModel.isValid)
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel",role: .cancel){
+            .safeAreaInset(edge: .top, content: {
+                Color.clear.frame(height: 70)
+            })
+            .safeAreaInset(edge: .bottom, content: {
+                Color.clear.frame(height: 85)
+            })
+            .ignoresSafeArea()
+            .overlay(
+                Button {
+                    withAnimation(.spring(response: 0.6,dampingFraction: 0.8)) {
                         displayPopupMessage.toggle()
                     }
-                    .alert(isPresented: $displayPopupMessage){
-                        Alert(title: Text("Warning"),
-                              message: Text("This is a test"),
-                              dismissButton: .default(Text("OK"), action: {
-                                        print("Ok Click")
-                                    print("thisclicked")
-                            handleDismissal()
-                                    })
-                                    )
-                    }
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.body.weight(.bold))
+                        .foregroundColor(.secondary)
+                        .padding(12)
+                        .background(.ultraThinMaterial, in: Circle())
                 }
-                
-
-            }
+                .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .topLeading)
+                .padding(20)
+                .offset(y:20)
+                .ignoresSafeArea()
+                .alert(isPresented: $displayPopupMessage){
+                    Alert(title: Text("Warning"),
+                          message: Text("All data will be deleted"),
+                          dismissButton: .default(Text("OK"), action: {
+                        shouldShowDashboard.toggle()
+                        print("Dis is customer details")
+                        print("thisclicked")
+    //                    handleDismissal()
+                    })
+                    )
+                }
+            )
+//            if shouldShowDashboard {
+//                theView()
+////                theView(n amespace: namespace, show: $shouldShowDashboard)
+//            }
+           
             
             
         }
+        .statusBarHidden(!showStatusBar)
+        .onChange(of: shouldShowDashboard) { newValue in
+            withAnimation(.spring(response: 0.6,dampingFraction: 0.8) ) {
+                if newValue {
+                    showStatusBar = false
+                } else {
+                    showStatusBar = true
+                }
+            }
 
-       
+        }
+        .background(
+            ZStack{
+                Color.black
+                RoundedRectangle(cornerRadius: 30,style: .continuous).foregroundStyle(.linearGradient(colors: [.blue,.black], startPoint: .topLeading, endPoint: .bottomTrailing)).frame(width: 1200,height: 450)
+                    .rotationEffect(.degrees(135))
+                    .offset(y:-400)
+                
+            })
+        .preferredColorScheme(.dark)
+        
+        
+        
+        
+        
+        
+        
+    }
+    var customerPrimaryInfo: some View {
+        VStack{
+           
+            clientInfo
+            address
+            ButtonView(title: "Save and Continue",
+                       background: .clear,
+                       border: .blue) {
+//                shouldShowDashboard.toggle()
+                showStatusBar = false
+                                shouldShowMeasures.toggle()
+                print($showStatusBar)
+                //this below save to Firebase
+                //trying alternative way to save to firestore
+                viewModel.custumerCreation()
+                
+            }
+            
+                       .fullScreenCover(isPresented: $shouldShowMeasures, content: {
+                           
+                           //                    MeasuresContentView()
+                           theView()
+                           
+                       })
+            //                        .disabled(!viewModel.isValid)
+            clearAll
+        }
+        .safeAreaInset(edge: .top, content: {
+            Color.clear.frame(height: 20)
+        })
+        
     }
     
 }
 
 struct MeasurementForm_Previews: PreviewProvider {
+    @Namespace static var namespace
+    
     static var previews: some View {
         //        MeasurementContentView{_ in}
-        CustomerDetailsContentView()
+        CustomerDetailsContentView(namespace: namespace,shouldShowDashboard: .constant(true))
+//        CustomerDetailsContentView()
     }
 }
 
 private extension CustomerDetailsContentView {
     var clientInfo: some View {
+        
         Section {
-            TextField(NSLocalizedString("First Name", comment: "na"),
-                      text: $viewModel.customerDetails.clientInfo.firstName)
-            .textContentType(.name)
-            .keyboardType(.namePhonePad)
+            InputTextFieldView(text: $viewModel.customerDetails.clientInfo.firstName, placeholder: "First Name", keyboardType: .default, sfSymbol: nil)
             
-            TextField(NSLocalizedString("Last Name", comment: "na"),
-                      text: $viewModel.customerDetails.clientInfo.lastName)
-            .textContentType(.familyName)
-            .keyboardType(.namePhonePad)
+            InputTextFieldView(text: $viewModel.customerDetails.clientInfo.lastName, placeholder: "Last Name", keyboardType: .default, sfSymbol: nil)
             
             Picker("Gender", selection: $viewModel.customerDetails.clientInfo.gender) {
                 ForEach(CustomersMeasurementsAndDetails.ClientInfo.Gender.allCases) { Item in
                     Text(Item.rawValue.uppercased())
                 }
             }
-//            Picker("Pronouns", selection: $viewModel.customerDetails.clientInfo.pronoun) {
-//                ForEach(CustomersMeasurementsAndDetails.ClientInfo.Pronouns.allCases) { Item in
-//                    Text(Item.rawValue.uppercased())
-//                }
-//            }
+            //            Picker("Pronouns", selection: $viewModel.customerDetails.clientInfo.pronoun) {
+            //                ForEach(CustomersMeasurementsAndDetails.ClientInfo.Pronouns.allCases) { Item in
+            //                    Text(Item.rawValue.uppercased())
+            //                }
+            //            }
             
-            TextField(NSLocalizedString("Phone",comment: "na"),
-                      text: $viewModel.customerDetails.clientInfo.phone)
-            .textContentType(.telephoneNumber)
-            .keyboardType(.phonePad)
+            InputTextFieldView(text: $viewModel.customerDetails.clientInfo.phone, placeholder: "Phone", keyboardType: .phonePad, sfSymbol: nil)
+            
+            InputTextFieldView(text: $viewModel.customerDetails.clientInfo.comments, placeholder: "Comments", keyboardType: .default, sfSymbol: nil)
             
             
-            TextField(NSLocalizedString("Comments",comment: "na"),
-                      text: $viewModel.customerDetails.clientInfo.comments)
         } header: {
-            Text(NSLocalizedString("Customer information", comment: "na"))
+            Text(NSLocalizedString("Customer information", comment: "na")).font(.largeTitle).font(.footnote)
         }
         .headerProminence(.increased)
+        
+        
     }
     
     var address: some View {
+        
         Section {
-            TextField(NSLocalizedString("Street Address", comment: "na"),
-                      text: $viewModel.customerDetails.address.streetAddress )
-            .textContentType(.streetAddressLine1)
             
-            TextField(NSLocalizedString("City", comment: "na"),
-                      text: $viewModel.customerDetails.address.city )
-            .textContentType(.addressCity)
+            InputTextFieldView(text: $viewModel.customerDetails.address.streetAddress, placeholder: "Street Address", keyboardType: .default, sfSymbol: nil)
             
-            TextField(NSLocalizedString("State/Providence", comment: "na"),
-                      text: $viewModel.customerDetails.address.stateProvidence )
-            .textContentType(.addressState)
+            InputTextFieldView(text: $viewModel.customerDetails.address.city, placeholder: "City", keyboardType: .default, sfSymbol: nil)
             
-            TextField(NSLocalizedString("Postal Code", comment: "na"),
-                      text: $viewModel.customerDetails.address.postalCode )
-            .textContentType(.postalCode)
+            InputTextFieldView(text: $viewModel.customerDetails.address.stateProvidence, placeholder: "State/Providence", keyboardType: .default, sfSymbol: nil)
             
-            TextField(NSLocalizedString("Country", comment: "na"),
-                      text: $viewModel.customerDetails.address.country )
-            .textContentType(.countryName)
+            InputTextFieldView(text: $viewModel.customerDetails.address.postalCode, placeholder: "Postal Code", keyboardType: .default, sfSymbol: nil)
+            
+            
+            InputTextFieldView(text: $viewModel.customerDetails.address.country, placeholder: "Country", keyboardType: .default, sfSymbol: nil)
+            
             
         } header: {
-            Text(NSLocalizedString("Mailing Address", comment: "na"))
+            Text(NSLocalizedString("Mailing Address", comment: "na")).font(.largeTitle).font(.footnote)
+        } footer: {
+            Text(LocalizedStringKey("If you go back before saving all data will be lost"))
+                .font(.footnote)
         }
         .headerProminence(.increased)
+        
         
     }
     

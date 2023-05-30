@@ -168,9 +168,9 @@ open class NetworkReachabilityManager {
                              onUpdatePerforming listener: @escaping Listener) -> Bool {
         stopListening()
 
-        $mutableState.write { state in
-            state.listenerQueue = queue
-            state.listener = listener
+        $mutableState.write { suitState in
+            suitState.listenerQueue = queue
+            suitState.listener = listener
         }
 
         var context = SCNetworkReachabilityContext(version: 0,
@@ -202,10 +202,10 @@ open class NetworkReachabilityManager {
     open func stopListening() {
         SCNetworkReachabilitySetCallback(reachability, nil, nil)
         SCNetworkReachabilitySetDispatchQueue(reachability, nil)
-        $mutableState.write { state in
-            state.listener = nil
-            state.listenerQueue = nil
-            state.previousStatus = nil
+        $mutableState.write { suitState in
+            suitState.listener = nil
+            suitState.listenerQueue = nil
+            suitState.previousStatus = nil
         }
     }
 
@@ -219,13 +219,13 @@ open class NetworkReachabilityManager {
     func notifyListener(_ flags: SCNetworkReachabilityFlags) {
         let newStatus = NetworkReachabilityStatus(flags)
 
-        $mutableState.write { state in
-            guard state.previousStatus != newStatus else { return }
+        $mutableState.write { suitState in
+            guard suitState.previousStatus != newStatus else { return }
 
-            state.previousStatus = newStatus
+            suitState.previousStatus = newStatus
 
-            let listener = state.listener
-            state.listenerQueue?.async { listener?(newStatus) }
+            let listener = suitState.listener
+            suitState.listenerQueue?.async { listener?(newStatus) }
         }
     }
 }

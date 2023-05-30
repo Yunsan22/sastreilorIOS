@@ -11,7 +11,7 @@ struct ButtonView: View {
     
     typealias ActionHandler = () -> Void
     
-    let title: String
+    let title: LocalizedStringKey
     let background: Color
     let foreground: Color
     let border: Color
@@ -19,7 +19,7 @@ struct ButtonView: View {
     
     private let cornerRadius: CGFloat = 10
     
-    internal init(title: String,
+    internal init(title: LocalizedStringKey,
                   background: Color = .blue,
                   foreground: Color = . white,
                   border: Color = .clear,
@@ -34,7 +34,7 @@ struct ButtonView: View {
     var body: some View {
         Button(action: handler,label: {
             Text(title)
-                .frame(maxWidth: .infinity,
+                .frame(maxWidth: .infinity,minHeight: 44,
                        maxHeight: 50)
         })
         .background(background)

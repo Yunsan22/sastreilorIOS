@@ -8,7 +8,7 @@
 import Foundation
 
 //aditional fields will be added for the measurments
-struct MeasuresDetails: Identifiable {
+struct SuitMeasuresDetails: Identifiable {
     var id: String
     var manShirtsMeasurments: ManShirtsMeasurements
     var womanShirtsMeasurments: WomanShirtsMeasurments
@@ -17,7 +17,7 @@ struct MeasuresDetails: Identifiable {
 }
 
 
-extension MeasuresDetails {
+extension SuitMeasuresDetails {
     struct ManShirtsMeasurements {
         var back: String
         var fistWidth: String
@@ -42,7 +42,7 @@ extension MeasuresDetails {
     }
     
 }
-extension MeasuresDetails {
+extension SuitMeasuresDetails {
     struct WomanShirtsMeasurments {
         var back: String
         var fistWidth: String
@@ -69,7 +69,7 @@ extension MeasuresDetails {
     }
     
 }
-extension MeasuresDetails {
+extension SuitMeasuresDetails {
     struct PantsMeasurments {
         var waist: String
         var hips: String
@@ -82,9 +82,9 @@ extension MeasuresDetails {
     }
 }
 
-extension MeasuresDetails {
-    static var new: MeasuresDetails {
-        MeasuresDetails(id: "",manShirtsMeasurments: ManShirtsMeasurements(back: "", fistWidth: "", sleeveLength: "", elbowWidth: "", chestWidth: "", bellyWidth: "", neckWidth: "", vestsLength: "", length: "", shortSleeveLength: "", shortSleeveWidth: "", armholeLength: "", armholeWidth: "", backWaistLength: "", backOverAllLength: "", armholeRoundedWidth: "", frontLength: "", shoulderWidth: "", waist: "", baseHips: ""), womanShirtsMeasurments: WomanShirtsMeasurments(back: "", fistWidth: "", sleeveLength: "", elbowWidth: "", chestWidth: "", bellyWidth: "", neckWidth: "", jacketsLength: "", length: "", shortSleeveWidth: "", skirtLength: "", bustWidth: "", lowBust: "", highBust: "", dressLength: "", armholeWidth: "", bustDrop: "", bustSeparation: "", waist: "", hips: "", lengthfromCaidatoLowBust: "", midHips: ""),pantsMeasurments: PantsMeasurments(waist: "", hips: "", flyFrontKnuckle: "", knee: "", trouserRoll: "", length: "", rearKnuckleLength: ""))
+extension SuitMeasuresDetails {
+    static var new: SuitMeasuresDetails {
+        SuitMeasuresDetails(id: "",manShirtsMeasurments: ManShirtsMeasurements(back: "", fistWidth: "", sleeveLength: "", elbowWidth: "", chestWidth: "", bellyWidth: "", neckWidth: "", vestsLength: "", length: "", shortSleeveLength: "", shortSleeveWidth: "", armholeLength: "", armholeWidth: "", backWaistLength: "", backOverAllLength: "", armholeRoundedWidth: "", frontLength: "", shoulderWidth: "", waist: "", baseHips: ""), womanShirtsMeasurments: WomanShirtsMeasurments(back: "", fistWidth: "", sleeveLength: "", elbowWidth: "", chestWidth: "", bellyWidth: "", neckWidth: "", jacketsLength: "", length: "", shortSleeveWidth: "", skirtLength: "", bustWidth: "", lowBust: "", highBust: "", dressLength: "", armholeWidth: "", bustDrop: "", bustSeparation: "", waist: "", hips: "", lengthfromCaidatoLowBust: "", midHips: ""),pantsMeasurments: PantsMeasurments(waist: "", hips: "", flyFrontKnuckle: "", knee: "", trouserRoll: "", length: "", rearKnuckleLength: ""))
     }
 }
 

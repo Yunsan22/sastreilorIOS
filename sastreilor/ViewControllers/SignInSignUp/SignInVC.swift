@@ -30,7 +30,9 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        overrideUserInterfaceStyle = .dark
+ 
         // Do any additional setup after loading the view.
        
 //        FBbtn.permissions = ["email","public_profile"]
@@ -39,7 +41,7 @@ class SignInVC: UIViewController {
     
     @IBAction func onTapForgotPw(_ sender: Any) {
         ForgotPWcliked()
-        
+        print("thiscliiiii")
     }
     
     @objc func ForgotPWcliked(){
@@ -265,6 +267,10 @@ class SignInVC: UIViewController {
                 //go into gome
                 let user = authResult!.user
                 if user.isEmailVerified {
+//                            let vc = UIHostingController(rootView: DashboardContentView())
+//
+//
+//                    self.presentInFullScreen(vc, animated: true)
                     self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 } else {
                     //email is not verified
@@ -313,6 +319,16 @@ class SignInVC: UIViewController {
     
 
 }
+
+extension SignInVC {
+    func presentInFullScreen(_ viewController: UIViewController,
+                               animated: Bool,
+                               completion: (() -> Void)? = nil) {
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: animated, completion: completion)
+      }
+}
+
 extension SignInVC {
     @objc func signinkeyboardWillShow(sender: NSNotification) {
 

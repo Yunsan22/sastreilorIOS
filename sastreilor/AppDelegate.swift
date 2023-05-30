@@ -13,6 +13,7 @@ import FirebaseAuth
 import GoogleSignIn
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,9 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
 //    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!){
 //        print("user email: \(user.profile?.email ?? "No email")")
 //    }
+    
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey:Any]) -> Bool {
 //        ApplicationDelegate.shared.application(
 //                    application,

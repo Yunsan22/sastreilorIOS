@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ol-cU-X2v">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -420,20 +419,7 @@
                         <viewLayoutGuide key="safeArea" id="DtM-sj-6cD"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oor-2V-BzQ">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Logout" id="w3B-d8-Uyz">
-                                <connections>
-                                    <action selector="onLogoutBtn:" destination="BIo-EZ-LY4" id="FGC-fF-6lO"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="profile_tab" id="ZGM-ur-NYd">
-                                <connections>
-                                    <segue destination="E3A-Zh-vGI" kind="show" id="ois-gu-wTA"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="oor-2V-BzQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4V-JV-ePn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -658,7 +644,6 @@
         <image name="brgRestSignin" width="428" height="508"/>
         <image name="file-check" width="25" height="25"/>
         <image name="measurement" width="25" height="25"/>
-        <image name="profile_tab" width="25" height="25"/>
         <image name="suit 1" width="499" height="499"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

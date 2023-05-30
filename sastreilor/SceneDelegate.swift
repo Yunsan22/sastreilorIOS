@@ -11,6 +11,10 @@ import FirebaseFirestore
 import FirebaseAuth
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftUI
+
+
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,9 +29,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        if Auth.auth().currentUser != nil {
         if Auth.auth().currentUser?.isEmailVerified == true {
-            let main = UIStoryboard(name: "Main",bundle: nil)
-            let tabBarNavigationController = main.instantiateViewController(withIdentifier: "TabBar")
-            window?.rootViewController = tabBarNavigationController
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
+//            let main = UIStoryboard(name: "Main",bundle: nil)
+//
+//            let tabBarNavigationController = main.instantiateViewController(withIdentifier: "TabBar")
+            window?.rootViewController = vc
         }
     }
     

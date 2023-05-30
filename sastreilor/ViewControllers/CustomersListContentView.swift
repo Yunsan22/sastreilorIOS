@@ -13,6 +13,7 @@ struct CustomersListContentView: View {
     
     var body: some View {
         NavigationView {
+            
             LazyVStack {
                 
             }
